@@ -1,4 +1,4 @@
-# Electronic_Circuit.md]
+# Electronic_Circuit
 
 cpu: Raspi5 16M csi
 
@@ -18,3 +18,4 @@ PB
 
 LED
 
+ADC
