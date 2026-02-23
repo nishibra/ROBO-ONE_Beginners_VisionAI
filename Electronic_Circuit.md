@@ -1,10 +1,9 @@
 # Electronic_Circuit
+## 概要
+- cpu: Raspi5 16M csi
+- Hat:電源 serial i2c fan rtc
 
-cpu: Raspi5 16M csi
-
-Hat:電源 serial i2c fan rtc
-
-# HAT_for_Raspi5
+## HAT_for_Raspi5
 
 ### BTE100B DXHAT
 
@@ -60,19 +59,14 @@ dtoverlay=uart4,txd4_pin=8,rxd4_pin=9
 またRaspberry Pi 3/Zeroの場合はcmdline.txtに記述されている「console=serial0,115200」を削除する事
 ```
 
+## camera: csi
 
-
-
-
-
-
-camera: csi
 
 battery:1000mAH
 
-servo:KRS3304-R2
+## servo:KRS3304-R2
 
-IMU
+## IMU
 
 PB
 
