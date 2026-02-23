@@ -8,7 +8,7 @@ https://github.com/nishibra/HAT_for_Raspi5
 
 camera: csi
 
-battery:1000mA
+battery:1000mAH
 
 servo:KRS3304-R2
 
