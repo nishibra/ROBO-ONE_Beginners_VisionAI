@@ -20,6 +20,10 @@ config.sysの設定
 sudo nano firmwear/config.sys
 - fanの設定
 
+
+
+
+
 ### I/O関係の接続確認
 - i2c
 - imu
