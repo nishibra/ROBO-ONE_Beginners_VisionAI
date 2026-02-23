@@ -47,14 +47,12 @@ picamera2で取得した画像はRGBですが、cv2.imshowやcv2.rectangleはBGR
 - フォーマットの最適化:
 XRGB8888 よりも、OpenCVと相性の良い RGB888 を使う方が無駄がありません。
 
-  
-
-### venv環境
-#### update
+## venv環境
+### update
 
 sudo apt update && sudo apt upgrade -y
 
-# 仮想環境をシステムパッケージ共有モードで作る
+### 仮想環境をシステムパッケージ共有モードで作る
 
 mkdir begin
 
@@ -62,7 +60,7 @@ cd begin
 
 python3 -m venv venv --system-site-packages
 
-# 再起動してインストール
+### 再起動してインストール
 
 source venv/bin/activate
 
@@ -72,9 +70,9 @@ ipip install ultralytics
 
 pip install mujoco gymnasium stable-baselines3 numpy 
 
-# picamera2はシステム側にあるものを使うので、再インストール不要です
+### picamera2はシステム側にあるものを使うので、再インストール不要です
 
-# 仮想環境を抜ける
+### 仮想環境を抜ける
 
 deactivate
 
