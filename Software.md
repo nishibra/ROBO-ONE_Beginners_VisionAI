@@ -1,10 +1,10 @@
 # Software
 ## ハード OS I/O 概要
-cpu : raspi5
-os :raspi OS 
-使用言語:python3
-serial: servo controll
-i2c: imu / adc
+- cpu : raspi5
+- os :raspi OS 
+- 使用言語:python3
+- serial: servo controll
+- i2c: imu / adc
 
 ## install
 ### 1.SDカードを作成
