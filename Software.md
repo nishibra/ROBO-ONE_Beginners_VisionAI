@@ -8,8 +8,8 @@
 * **OS**: Raspberry Pi OS Trixie (Debian 13) 64-bit
 * **言語**: Python 3.11以降
 * **通信プロトコル**:
-* **Serial (UART)**: サーボモーター制御用 (KRSサーボ等)
-* **I2C**: IMU (慣性計測装置) / ADC (アナログ-デジタル変換) 用
+　* **Serial (UART)**: サーボモーター制御用 (KRSサーボ等)
+　* **I2C**: IMU (慣性計測装置) / ADC (アナログ-デジタル変換) 用
 
 
 
