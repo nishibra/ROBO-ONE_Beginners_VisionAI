@@ -140,7 +140,89 @@ pip install numpy
 ---
 
 
+Raspberry Piをロボットとして運用する場合、電源を入れるだけでプログラムが動き出す**systemd**の設定は必須級のステップですね。
 
+仮想環境（venv）を使用している場合、`ExecStart` に **venv内のPythonパス**を直接指定するのが最もスマートでトラブルの少ない方法です。
+
+---
+
+## systemd による自動起動の設定手順
+
+### 1. サービスファイルの作成
+
+以下のコマンドで、新しいサービス設定ファイルを作成します（ファイル名は `my_robot.service` とします）。
+
+```bash
+sudo nano /etc/systemd/system/my_robot.service
+
+```
+
+### 2. 設定内容の記述
+
+以下の内容をコピー＆ペーストしてください。各パスはご自身の環境に合わせて書き換えてください。
+
+```ini
+[Unit]
+Description=My Vision AI Robot Service
+After=network.target
+
+[Service]
+# 実行ユーザー（通常は pi）
+User=pi
+# プログラムがあるディレクトリ
+WorkingDirectory=/home/pi/begin
+# 仮想環境内のpythonパスを直接指定して実行
+ExecStart=/home/pi/begin/venv/bin/python3 main.py
+# 異常終了した時に5秒後に再起動する設定
+Restart=always
+RestartSec=5
+# 標準出力（ログ）の送り先
+StandardOutput=inherit
+StandardError=inherit
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+### 3. サービスの有効化と起動
+
+ファイルを保存（`Ctrl+O` -> `Enter`）し、エディタを終了（`Ctrl+X`）したら、以下のコマンドでシステムに反映させます。
+
+```bash
+# 設定の再読み込み
+sudo systemctl daemon-reload
+
+# 自動起動の有効化
+sudo systemctl enable my_robot.service
+
+# 今すぐ起動（テスト）
+sudo systemctl start my_robot.service
+
+```
+
+---
+
+## 運用で役立つコマンド
+
+自動起動を設定した後は、画面に何も表示されないため「本当に動いているか？」を確認する術を知っておく必要があります。
+
+* **状態の確認**:
+`systemctl status my_robot.service`
+（実行中か、エラーで止まっているかが一目でわかります）
+* **ログのリアルタイム確認**:
+`journalctl -u my_robot.service -f`
+（Pythonの `print()` 内容をリアルタイムで監視できます。デバッグに最適です）
+* **停止・再起動**:
+`sudo systemctl stop my_robot.service` / `sudo systemctl restart my_robot.service`
+
+---
+
+## 注意点：GUIが必要な場合
+
+もしプログラム内で `cv2.imshow` などの**ウィンドウを表示するコード**が含まれている場合、通常の systemd ではエラーになります。その場合は、プログラム側でウィンドウ表示をオフにするか、デスクトップ環境が立ち上がってから実行される `autostart` 方式に切り替える必要があります。
+
+**次は、「プログラムがエラーで落ちた時のログを保存する方法」や「特定のI/Oデバイスが準備できるまで起動を待機させる設定」などについて詳しく解説しましょうか？**
 
 
 
