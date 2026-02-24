@@ -1,15 +1,15 @@
 # Software
 ## ハード OS I/O 概要
-- cpu : raspi5
-- os :raspi OS 
+- cpu : raspi5 Memory 4Gbyte以上
+- os :Raspberry Pi OS Trixie 64ビット版 通常版 
 - 使用言語:python3
-- serial: servo controll
+- serial: servo-controll
 - i2c: imu / adc
 
 ## install
 ### 1.SDカードを作成
-os:
-raspi connect
+Raspberry Pi Imagerを使用してSDカードを作成します。
+os:Trixie 64ビット版を書き込みます。
 
 ### osとconfigの設定
 起動
@@ -17,6 +17,9 @@ config.sysの設定
 - camera
 - i2c
 - tty
+- raspi connectを使用します。
+raspi connectはWiFiを介して遠隔操縦が可能となります。登録が必要ですが、一度設定しておくとディスプレイやキーボードが不要で便利です。
+- 
 
 sudo nano /boot/firmware/config.txt
 
