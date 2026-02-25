@@ -225,6 +225,73 @@ sudo systemctl start my_robot.service
 **次は、「プログラムがエラーで落ちた時のログを保存する方法」や「特定のI/Oデバイスが準備できるまで起動を待機させる設定」などについて詳しく解説しましょうか？**
 
 
+ご提示いただいた解説文は、手順の全体像は掴めますが、初めて挑戦する方にとっては「どこでその操作をするのか」「具体的な設定画面はどこか」が少し分かりにくいかもしれません。
+
+以下に、初心者の方でも迷わず進められるよう、情報の補足と整理を行った構成案を作成しました。
+
+---
+
+## 【補足版】Raspberry Pi Connect の導入・利用手順
+
+Raspberry Pi Connectを使うと、ブラウザ越しにどこからでもRaspberry Piのデスクトップにアクセスできます。セットアップを以下のステップに分けて解説します。
+
+### 1. 準備：OSのインストール
+
+Raspberry Pi Connectを利用するには、OSのバージョンと種類が重要です。
+
+* **OSの選択:** **Raspberry Pi OS (64-bit)** の最新版（Bookworm以降）をインストールしてください。
+* ※Raspberry Pi 4 / 5 / 400 が推奨されています。
+* ※デスクトップ版（Desktop）を選択してください（Lite版は非対応です）。
+
+
+* **書き込み:** 公式の「Raspberry Pi Imager」を使ってmicroSDカード（またはSSD）に書き込み、Raspberry Piを起動します。
+
+### 2. Raspberry Pi ID の作成
+
+あらかじめ、管理用の公式アカウントを作成しておくとスムーズです。
+
+* [Raspberry Pi ID 登録ページ](https://id.raspberrypi.com/) にアクセスし、メールアドレスでアカウントを作成・サインインしておきます。
+
+### 3. Connect サービスの有効化（本体側の操作）
+
+Raspberry Piが起動したら、機能をオンにします。
+
+1. **インストール（必要な場合）:**
+ターミナルを開き、念のため最新の状態に更新してインストールを確認します。
+```bash
+sudo apt update
+sudo apt install rpi-connect
+
+```
+
+
+2. **機能を有効化:**
+メニューの「設定」→「Raspberry Pi Configuration」→「Interfaces」タブの中に「Raspberry Pi Connect」という項目があれば **ON** にします。
+（または、ターミナルで `systemctl --user enable rpi-connect` を実行します）
+
+### 4. デバイスの紐付け（リンク）
+
+ここが最も重要なステップです。
+
+1. Raspberry Piのデスクトップ右上（タスクバー）に、Connectのアイコン（雲のようなマーク）が表示されます。
+2. アイコンをクリックし、**[Sign In]** を選択します。
+3. ブラウザが立ち上がり、「このRaspberry Piをあなたのアカウントに登録しますか？」という画面（Link Device）が表示されます。
+4. **デバイス名を入力:** 自分が管理しやすい名前（例: `My-RasPi5` など）を付けて、[Link Device] ボタンを押します。
+
+### 5. 外部から接続する
+
+設定が完了したら、別のPCやスマホのブラウザから操作可能です。
+
+1. 接続元PCのブラウザで [https://connect.raspberrypi.com/devices](https://connect.raspberrypi.com/devices) にアクセスします。
+2. 自分のRaspberry Pi IDでサインインします。
+3. 登録したデバイスの一覧が表示されるので、右側にある **[Connect]** ボタンをクリックします。
+4. これでブラウザ内にRaspberry Piのデスクトップが表示されます！
+
+---
+
+
+
+
 
 
 
