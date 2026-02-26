@@ -2,5 +2,7 @@
 
 全体デザイン
 
+![VisionAI](pics/VisionAI.png)
+
 - CPU case
 - stlデータ
