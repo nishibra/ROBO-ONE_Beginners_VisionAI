@@ -14,7 +14,7 @@ Raspi5を使用し深層学習を走らせることから冷却系の考慮と�
 wheelは1partsとしました。O-ringを入れることで完成です。
 O-ringは以下より購入可能です。
 
- ![Amazon](https://www.amazon.co.jp/dp/B07W3BR9TY?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
+[Amazon](https://www.amazon.co.jp/dp/B07W3BR9TY?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
  
  
  
