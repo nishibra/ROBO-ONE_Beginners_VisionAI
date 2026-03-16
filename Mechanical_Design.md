@@ -30,5 +30,34 @@ O-ringは以下より購入可能です。
 ### PSDセンサーBKT
 ### armとHeadは同じ
 
+
+![VisionAI](pics_mech/BatteryCover.jpg)
+![VisionAI](pics_mech/Battery_cover.png)
+![VisionAI](pics_mech/Body_V.png)
+![VisionAI](pics_mech/CPU_case.png)
+![VisionAI](pics_mech/CPU_cover.png)
+![VisionAI](pics_mech/Chassis_V_90.png)
+![VisionAI](pics_mech/How2set.jpg)
+![VisionAI](pics_mech/Pan_stand.png)
+![VisionAI](pics_mech/ServoTire.jpg)
+![VisionAI](pics_mech/SetCamera.jpg)
+![VisionAI](pics_mech/SetCamera2.jpg)
+![VisionAI](pics_mech/Tilt_bkt.png)
+![VisionAI](pics_mech/VisionAI.png)
+![VisionAI](pics_mech/Wheel_V.png)
+![VisionAI](pics_mech/arm_bkt.png)
+![VisionAI](pics_mech/camera_cover.png)
+![VisionAI](pics_mech/chassis.jpg)
+![VisionAI](pics_mech/doorn.png)
+![VisionAI](pics_mech/head.png)
+![VisionAI](pics_mech/ins.png)
+![VisionAI](pics_mech/insert.png)
+![VisionAI](pics_mech/kote_v1.png)
+![VisionAI](pics_mech/pi5_Vision_Asy_3D.jpg)
+![VisionAI](pics_mech/psd1_bkt.png)
+![VisionAI](pics_mech/psd2_bkt.png)
+![VisionAI](pics_mech/wheel.jpg)
+
+
   
 ### stlデータ
