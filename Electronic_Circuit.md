@@ -5,6 +5,13 @@
 
 ## HAT_for_Raspi5
 
+https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
+
+HeatSink
+
+https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
+
+
 ### BTE100B DXHAT
 
 https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT
