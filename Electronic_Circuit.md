@@ -60,7 +60,8 @@ dtoverlay=uart4,txd4_pin=8,rxd4_pin=9
 ```
 
 ## camera: csi
-
+## sw
+https://www.amazon.co.jp/dp/B0D4PX1V4Q?ref=ppx_yo2ov_dt_b_fed_asin_title
 
 battery:1000mAH
 
