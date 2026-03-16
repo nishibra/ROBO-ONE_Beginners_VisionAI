@@ -4,7 +4,7 @@
 
 外形はauto型と同じですがCPUはRaspi5に替わり、カメラが搭載されます。シャーシとアームサーボ受け部は部品点数の低減と組み立て整備性の改善を図りました。
 
-![VisionAI](pics/VisionAI.png)
+![VisionAI](pics_mech/VisionAI.png)
 
 ### CPU case
 
