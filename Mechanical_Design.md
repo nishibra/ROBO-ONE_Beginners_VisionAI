@@ -33,7 +33,7 @@ O-ringは以下より購入可能です。
 ### シャーシ
 キャスタ
 カグスベールを取り付ける。
-
+![VisionAI](pics_mech/chassis.jpg)
 ![VisionAI](pics_mech/Chassis_V_90.png)
 ![VisionAI](pics_mech/How2set.jpg)
 
@@ -50,31 +50,36 @@ O-ringは以下より購入可能です。
  Amazon
 ### CPU cover
 ### yhoo servo bkt
-### tilt bkt
-### arm bkt
-### PSDセンサーBKT
-### armとHeadは同じ
-
-
-
-
 ![VisionAI](pics_mech/Pan_stand.png)
+
+### tilt bkt
+![VisionAI](pics_mech/Tilt_bkt.png)
+
+### arm bkt
+
+### PSDセンサーBKT
+
+### armとHeadは同じ
 
 ![VisionAI](pics_mech/SetCamera.jpg)
 ![VisionAI](pics_mech/SetCamera2.jpg)
-![VisionAI](pics_mech/Tilt_bkt.png)
-![VisionAI](pics_mech/VisionAI.png)
+
+
+
+
 
 ![VisionAI](pics_mech/arm_bkt.png)
 ![VisionAI](pics_mech/camera_cover.png)
-![VisionAI](pics_mech/chassis.jpg)
 
 
-------------------------------
+
+
 
 
 ![VisionAI](pics_mech/doorn.png)
 ![VisionAI](pics_mech/head.png)
+
+------------------------------
 ![VisionAI](pics_mech/ins.png)
 ![VisionAI](pics_mech/insert.png)
 ![VisionAI](pics_mech/kote_v1.png)
