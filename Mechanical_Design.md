@@ -18,6 +18,9 @@ Raspi5を使用し深層学習を走らせることから冷却系の考慮と�
 ![VisionAI](pics_mech/CPU_cover.png)
 
 
+![VisionAI](pics_mech/psd1_bkt.png)
+![VisionAI](pics_mech/psd2_bkt.png)
+
 ### Wheel
 wheelは1partsとしました。O-ringを入れることで完成です。
 
@@ -56,6 +59,7 @@ O-ringは以下より購入可能です。
 ![VisionAI](pics_mech/Tilt_bkt.png)
 
 ### arm bkt
+![VisionAI](pics_mech/kote_v1.png)
 
 ### PSDセンサーBKT
 
@@ -64,28 +68,20 @@ O-ringは以下より購入可能です。
 ![VisionAI](pics_mech/SetCamera.jpg)
 ![VisionAI](pics_mech/SetCamera2.jpg)
 
-
-
-
-
 ![VisionAI](pics_mech/arm_bkt.png)
 ![VisionAI](pics_mech/camera_cover.png)
-
-
-
 
 
 
 ![VisionAI](pics_mech/doorn.png)
 ![VisionAI](pics_mech/head.png)
 
-------------------------------
+---
 ![VisionAI](pics_mech/ins.png)
 ![VisionAI](pics_mech/insert.png)
-![VisionAI](pics_mech/kote_v1.png)
+---
 
-![VisionAI](pics_mech/psd1_bkt.png)
-![VisionAI](pics_mech/psd2_bkt.png)
+
 
 
 
