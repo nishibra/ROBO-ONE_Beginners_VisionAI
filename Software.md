@@ -287,14 +287,81 @@ sudo apt install rpi-connect
 3. 登録したデバイスの一覧が表示されるので、右側にある **[Connect]** ボタンをクリックします。
 4. これでブラウザ内にRaspberry Piのデスクトップが表示されます！
 
+
 ---
 
+### 「ボタンを押した瞬間に、別のPythonスクリプトやシステムコマンド（プログラム）を起動したい」
+
+Python標準ライブラリの `subprocess` を組み合わせるのが一般的です。
+
+### 1. 別のPythonスクリプトを起動する場合
+例えば、ボタンを押すと `web_server.py` という別のプログラムをバックグラウンドで起動する例です。
+
+```python
+from gpiozero import Button
+from signal import pause
+import subprocess
+
+def start_program():
+    print("プログラムを起動します...")
+    # 別のPythonスクリプトを非同期で実行
+    subprocess.Popen(["python3", "web_server.py"])
+
+button = Button(13)
+
+# 割り込みで関数を呼び出す
+button.when_pressed = start_program
+
+pause()
+```
+
+---
+
+### 2. シェルコマンドやアプリを起動する場合
+システムコマンド（例えば、カメラの録画開始や音楽再生など）を動かす場合も同様です。
+
+```python
+import subprocess
+from gpiozero import Button
+
+def run_command():
+    # 例：システムをシャットダウンする、または特定のアプリを開く
+    # subprocess.run(["ls", "-l"]) # テスト用にファイル一覧を表示
+    subprocess.Popen(["vlc", "music.mp3"]) # 音楽プレーヤーを起動
+
+button = Button(13)
+button.when_pressed = run_command
+```
+
+---
+
+### 重要なポイント：`run` と `Popen` の違い
+プログラムを「起動」させる際、用途によって使い分ける必要があります。
+
+* **`subprocess.run()`**: そのプログラムが**終わるまで、メインのPythonスクリプトが止まります**（同期処理）。
+* **`subprocess.Popen()`**: そのプログラムを**裏で起動し、メインのスクリプトはすぐに次の処理へ進みます**（非同期処理）。「ボタンを押してアプリを立ち上げる」なら、こちらがスムーズです。
+
+---
+
+### 注意点：多重起動の防止
+今のコードだと、ボタンを連打するとプログラムが何個も立ち上がってしまい、ラズパイのメモリを圧迫する可能性があります。
+
+もし「既に起動していたら何もしない」という風にしたい場合は、以下のようにフラグ管理をするのがスマートです。
+
+```python
+process = None
+
+def start_program():
+    global process
+    # プロセスがまだ動いていない（または終了している）かチェック
+    if process is None or process.poll() is not None:
+        print("新規起動します")
+        process = subprocess.Popen(["python3", "target_script.py"])
+    else:
+        print("既に実行中です")
+```
 
 
-
-
-
-
-
+---
 
 ### PCのsimulation dataの移植
