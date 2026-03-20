@@ -168,11 +168,11 @@ After=network.target
 
 [Service]
 # 実行ユーザー（通常は pi）
-User=pi
+User=nishi
 # プログラムがあるディレクトリ
-WorkingDirectory=/home/pi/begin
+WorkingDirectory=/home/nishi/begin
 # 仮想環境内のpythonパスを直接指定して実行
-ExecStart=/home/pi/begin/venv/bin/python3 main.py
+ExecStart=/home/nishi/begin/venv/bin/python3 /home/nishi/begin/rf/main.py
 # 異常終了した時に5秒後に再起動する設定
 Restart=always
 RestartSec=5
@@ -195,7 +195,8 @@ sudo systemctl daemon-reload
 
 # 自動起動の有効化
 sudo systemctl enable my_robot.service
-
+# 無効化
+sudo systemctl disable my_robot.service
 # 今すぐ起動（テスト）
 sudo systemctl start my_robot.service
 
