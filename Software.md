@@ -361,7 +361,77 @@ def start_program():
     else:
         print("既に実行中です")
 ```
+`systemd` はバックグラウンド（画面なし）で動くのが得意ですが、**OpenCVの `cv2.imshow` でプレビュー画面を出したい**場合や、デスクトップが立ち上がってからGUIアプリとして起動したい場合は、**Wayland/Wayfire の Autostart** 方式を使います。
 
+Raspberry Pi 5（Raspberry Pi OS 64-bit）はデフォルトの表示サーバーが **Wayland** になっているため、従来の `~/.config/lxsession/...` 方式ではなく、以下の手順で行うのが最も確実です。
+
+---
+
+## 1. 自動起動用ディレクトリの作成
+まず、自動起動設定ファイルを置くためのディレクトリを作成します（既にある場合は飛ばしてOKです）。
+
+```bash
+mkdir -p ~/.config/autostart
+```
+
+## 2. デスクトップエントリーファイルの作成
+次に、起動したいプログラムの情報を記した `.desktop` ファイルを作成します。
+
+```bash
+nano ~/.config/autostart/robot_gui.desktop
+```
+
+中身を以下のように記述してください。
+
+```ini
+[Desktop Entry]
+Type=Application
+Name=Robot Vision AI
+# 仮想環境のpythonパス + 実行するスクリプトのフルパス
+Exec=/home/pi/begin/venv/bin/python3 /home/pi/begin/main.py
+# 起動時のカレントディレクトリ
+Path=/home/pi/begin
+# ターミナルを表示させたい場合は true
+Terminal=false
+# 自動起動を有効にする
+X-GNOME-Autostart-enabled=true
+```
+
+## 3. 実行権限の付与
+作成したファイルに実行権限を与えます。
+
+```bash
+chmod +x ~/.config/autostart/robot_gui.desktop
+```
+
+これで、次回再起動した際に**デスクトップ画面が表示された直後**にプログラムが動き出します。
+
+---
+
+## 注意点とデバッグのコツ
+
+### ① パスは必ず「フルパス」で
+`python3` や `main.py` とだけ書くと、システムが場所を見つけられず起動に失敗します。必ず `/home/pi/...` から始まるフルパスで記述してください。
+
+### ② ネットワーク待ち（重要）
+もしプログラム内で「ネットからAIモデルをダウンロードする」や「特定のIPに通信する」処理がある場合、デスクトップ起動直後はまだWi-Fiがつながっていないことがあります。その場合は、Pythonコードの冒頭に数秒の待機を入れるのが簡単で確実です。
+
+```python
+import time
+time.sleep(10)  # 起動後10秒待ってからメイン処理を開始
+```
+
+### ③ ログの確認方法
+Autostart方式は `systemctl status` のような便利な確認コマンドがありません。エラーで動かない場合は、以下のように記述してログをファイルに書き出すようにすると原因が特定しやすくなります。
+
+```ini
+# Execの行を以下のように書き換えてログを保存
+Exec=/bin/bash -c '/home/pi/begin/venv/bin/python3 /home/pi/begin/main.py > /home/pi/robot_debug.log 2>&1'
+```
+
+---
+
+**次は、この自動起動を「特定のスイッチを押したときだけ解除する」ような、現場で役立つ運用テクニックについて解説しましょうか？**
 
 ---
 
