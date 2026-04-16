@@ -40,9 +40,6 @@ O-ringは以下より購入可能です。
 ![VisionAI](pics_mech/chassis.jpg)
 ![VisionAI](pics_mech/Chassis_V_90.png)
 
-![VisionAI](pics_mech/How2set.jpg)
-
-
 ### body
 モノコックとし、サーボモータを90度毎に自由にセットできるようにしました。これにより容量の大きなバッテリーの搭載が可能となります。
 リチウムポリマーの7.4V2000mAH程度のバッテリーの搭載が工夫次第で可能です。
@@ -61,6 +58,11 @@ CPUケースの取り付けボス部はねじを埋め込みます。
 ### CPU cover
 ### yhoo servo bkt
 ![VisionAI](pics_mech/Pan_stand.png)
+
+
+![VisionAI](pics_mech/How2set.jpg)
+
+
 
 ### tilt bkt
 ![VisionAI](pics_mech/Tilt_bkt.png)
