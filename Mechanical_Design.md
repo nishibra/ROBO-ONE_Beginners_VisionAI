@@ -9,10 +9,10 @@
 ![VisionAI](pics_mech/pi5_Vision_Asy_3D.jpg)
 
 
-### CPU case
+### Raspi5 CPU case
 
-Raspi5を使用し深層学習を走らせることから冷却系の考慮とバッテリへの容量アップが搭載可能なものとしました。
-
+Raspi5を使用し深層学習を走らせることから冷却系の考慮とバッテリへの容量アップが搭載可能なものとしました。外形はautoのpico CPU caseと同じサイズとしました。
+今回後部のPSDブラケットはCPU caseと一体としました。前方は分離型としTofセンサーは廃止しカメラで対応することとします。
 
 ![VisionAI](pics_mech/CPU_case.png)
 ![VisionAI](pics_mech/CPU_cover.png)
@@ -44,7 +44,7 @@ O-ringは以下より購入可能です。
 モノコックとし、サーボモータを90度毎に自由にセットできるようにしました。これにより容量の大きなバッテリーの搭載が可能となります。
 リチウムポリマーの7.4V2000mAH程度のバッテリーの搭載が工夫次第で可能です。
 CPUケースの取り付けボス部はねじを埋め込みます。
-CPUカバーの締め付けを繰り返すとねじが馬鹿になるのでインサートを使用しました。購入の都合でM2.5を使用しています。
+CPUカバーの締め付けを繰り返すとねじが馬鹿になるのでインサートを使用しました。M2.5を使用しています。
 
 [動画](https://www.youtube.com/shorts/zL2C9oKePpQ)
 
@@ -55,10 +55,14 @@ CPUカバーの締め付けを繰り返すとねじが馬鹿になるのでイ�
 ![VisionAI](pics_mech/BatteryCover.jpg)
 ![VisionAI](pics_mech/Battery_cover.png)
 
-
-
  Amazon
+
+ 
 ### CPU cover
+
+![VisionAI](pics_mech/CPU_cover.png)
+
+
 ### yhoo servo bkt
 ![VisionAI](pics_mech/Pan_stand.png)
 
