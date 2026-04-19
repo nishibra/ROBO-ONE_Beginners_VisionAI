@@ -4,7 +4,7 @@
 - Hat:電源 serial i2c fan rtc
 
 ### Raspi5
-![VisionAI](pics_elec/hat.png)
+![VisionAI](pics_elec/raspi5.png)
 
 https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
 
