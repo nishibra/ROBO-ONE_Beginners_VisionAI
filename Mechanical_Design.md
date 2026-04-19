@@ -10,6 +10,8 @@
 ## 2.Raspi5 CPU case
 外形はROBO-ONE Beginners autoのpico CPU caseと同じサイズとしました。後部のPSDブラケットはCPU caseと一体化、前方は分離型のままでTofセンサーBKTは廃止しカメラで対応することとします。
 #### CPU case
+CPU case cover締め付けボスに2.5mmインサートを挿入しておきます。挿入方法はROBO-ONE Beginners autoと同じですのでご参照ください。
+CPUはM2.5-8mmのねじでケース下より締め付けます。事前にCPUとハットマウント用ディスタンスをねじM2.5-4mmのねじで締め付けておきます。
 ![VisionAI](pics_mech/CPU_case.png)
 ### CPU case cover
 ![VisionAI](pics_mech/CPU_cover.png)
