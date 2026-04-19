@@ -93,6 +93,8 @@ O-ringは以下より購入可能です。
 ![VisionAI](pics_mech/slider.jpg)
 ![VisionAI](pics_mech/Chassis_V_70.png)
 
+[スライダー購入先](https://www.amazon.co.jp/dp/B07W3BR9TY?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
+
 ### body
 モノコックとし、サーボモータを90度毎に自由にセットできるようにしました。これにより容量の大きなバッテリーの搭載が可能となります。
 リチウムポリマーの7.4V2000mAH程度のバッテリーの搭載が工夫次第で可能です。
