@@ -20,6 +20,8 @@ PSD BKTはCPU caseにM2-5mmのスクリューねじでねじ止めします。
 ![VisionAI](pics_mech/psd2_bkt.png)
 
 ### CPU case cover
+CPU case coverはCPU caseに4本のM2.5-8mmで締め付けます。更にアームまわりを搭載します。
+
 ![VisionAI](pics_mech/CPU_cover.png)
 
 ## 3.アーム廻り
