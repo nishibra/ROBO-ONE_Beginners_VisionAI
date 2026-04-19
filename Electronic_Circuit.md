@@ -33,7 +33,7 @@ https://www.amazon.co.jp/dp/B0DNFP5QJR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 ![VisionAI](pics_elec/bno055.png)
 
 #### push sw
-![VisionAI](pics_elec/bno055.png)
+![VisionAI](pics_elec/sw.jpg)
 
 https://www.amazon.co.jp/dp/B0D4PX1V4Q?ref=ppx_yo2ov_dt_b_fed_asin_title
 
