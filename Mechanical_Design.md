@@ -54,7 +54,7 @@ Tiltサーボモーターの固定とヘッドを一体化しました。
 ![VisionAI](pics_mech/SetCamera.jpg)
 
 #### camera cover
-Camera coverはパチッというまで押し込むとロックされます。
+Camera coverはパチッというまで押し込むと固定されます。
 
 ![VisionAI](pics_mech/camera_cover.png)
 
