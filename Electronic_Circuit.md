@@ -28,57 +28,27 @@ https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 #### Flexible cable
 https://www.amazon.co.jp/dp/B0DNFP5QJR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 
-### IMU
+### 入出力
 #### bno055
 ![VisionAI](pics_elec/bno055.png)
 
-### 入出力
 #### push sw
 ![VisionAI](pics_elec/bno055.png)
 
-#### LED
-
-
-
-## HAT_for_Raspi5
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## sw
 https://www.amazon.co.jp/dp/B0D4PX1V4Q?ref=ppx_yo2ov_dt_b_fed_asin_title
 
-battery:1000mAH
+#### LED
+
+#### ADC
+
+### battery
+
+:1000mAH
 
 ## servo:KRS3304-R2
 
-## IMU
 
-PB
-
-LED
-
-ADC
-
-
-
-
-
-
-
-
-
+---
 #### config.txtに追記する情報
 ```
 [all]
