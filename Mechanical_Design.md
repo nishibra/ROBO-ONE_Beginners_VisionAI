@@ -38,7 +38,7 @@ Pan servo bktにはPan用サーボモーターを4本のM2-5mmで締め付けま
 
 Pan_standを3dプリンターで製作する場合はBrimをつけ、横方向からプリントするようにします。
 
-#### tilt_bkt Head
+#### Tilt_bkt and Head
 Tiltサーボモーターの固定とヘッドを一体化しました。
 
 ![VisionAI](pics_mech/head.png)
@@ -89,7 +89,7 @@ O-ringは以下より購入可能です。
 ### シャーシ
 キャスタにはカグスベールを採用しました。滑りやすくなり走行抵抗や走行音が少なくなりました。カグスベールはシャーシのキャスター取り付け部の丸い部分のセンターに取り付けてください。ボディとの取り付けは2mのスクリューねじで取り付けます。
 
-![VisionAI](pics_mech/set_slider.jpg)
+![VisionAI](pics_mech/slider.jpg)
 ![VisionAI](pics_mech/Chassis_V_70.png)
 
 ### body
@@ -101,6 +101,8 @@ CPUカバーの締め付けを繰り返すとねじが馬鹿になるのでイ�
 [動画](https://www.youtube.com/shorts/zL2C9oKePpQ)
 
 ![VisionAI](pics_mech/Body_V.png)
+
+
 
 バッテリの交換性向上のためねじ取り付けはやめ、パッチンと挿入できるようにしました。バッテリーを取り際したらカバーを下部より押し込んでください。外すときは上部の半円の切り欠き部に指を入れ引っ張り外してください。
 
