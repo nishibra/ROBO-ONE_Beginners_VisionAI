@@ -89,8 +89,8 @@ O-ringは以下より購入可能です。
 ### シャーシ
 キャスタにはカグスベールを採用しました。滑りやすくなり走行抵抗や走行音が少なくなりました。カグスベールはシャーシのキャスター取り付け部の丸い部分のセンターに取り付けてください。ボディとの取り付けは2mのスクリューねじで取り付けます。
 
-![VisionAI](pics_mech/chassis.jpg)
-![VisionAI](pics_mech/Chassis_V_90.png)
+![VisionAI](pics_mech/set_slider.jpg)
+![VisionAI](pics_mech/Chassis_V_70.png)
 
 ### body
 モノコックとし、サーボモータを90度毎に自由にセットできるようにしました。これにより容量の大きなバッテリーの搭載が可能となります。
