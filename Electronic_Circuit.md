@@ -4,10 +4,10 @@
 - Hat:電源 serial i2c fan rtc
 
 #### Raspi5
-![VisionAI](pics_mech/VisionAI.png)
+![VisionAI](pics_elec/hat.png)
 
 #### Hat
-![VisionAI](pics_mech/pi5_Vision_Asy_3D.png)
+![VisionAI](pics_elec/raspi_camera.jpg)
 
 
 
