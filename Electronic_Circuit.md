@@ -3,27 +3,80 @@
 - cpu: Raspi5 16M csi
 - Hat:電源 serial i2c fan rtc
 
-#### Raspi5
+### Raspi5
 ![VisionAI](pics_elec/hat.png)
 
-#### Hat
+https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
+
+### Hat
+#### BTE100B DXHAT
+![VisionAI](pics_elec/hat.png)
+
+https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT
+
+#### HeatSink
+https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
+
+#### 電源SW
+![VisionAI](pics_elec/bno055.png)
+
+### CSI camera
 ![VisionAI](pics_elec/raspi_camera.jpg)
 
+#### camera: csi
+
+#### Flexible cable
+https://www.amazon.co.jp/dp/B0DNFP5QJR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
+
+### IMU
+#### bno055
 ![VisionAI](pics_elec/bno055.png)
+
+### 入出力
+#### push sw
+![VisionAI](pics_elec/bno055.png)
+
+#### LED
+
 
 
 ## HAT_for_Raspi5
 
-https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
-
-HeatSink
-
-https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 
 
-### BTE100B DXHAT
 
-https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT
+
+
+
+
+
+
+
+
+
+
+
+## sw
+https://www.amazon.co.jp/dp/B0D4PX1V4Q?ref=ppx_yo2ov_dt_b_fed_asin_title
+
+battery:1000mAH
+
+## servo:KRS3304-R2
+
+## IMU
+
+PB
+
+LED
+
+ADC
+
+
+
+
+
+
+
 
 
 #### config.txtに追記する情報
@@ -74,23 +127,3 @@ dtoverlay=uart4,txd4_pin=8,rxd4_pin=9
 使用するポートのみを活性化する事を推奨。Linux上でのデバイス名は概ねttyAMAのプレフィクスで始まる。
 またRaspberry Pi 3/Zeroの場合はcmdline.txtに記述されている「console=serial0,115200」を削除する事
 ```
-
-## camera: csi
-
-#### Flexible cable
-https://www.amazon.co.jp/dp/B0DNFP5QJR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
-
-## sw
-https://www.amazon.co.jp/dp/B0D4PX1V4Q?ref=ppx_yo2ov_dt_b_fed_asin_title
-
-battery:1000mAH
-
-## servo:KRS3304-R2
-
-## IMU
-
-PB
-
-LED
-
-ADC
