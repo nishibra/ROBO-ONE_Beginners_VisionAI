@@ -1,21 +1,19 @@
 # Mechanical_Design
 
 ## 1.全体デザイン
-外形はROBO-ONE Beginners auto型と同じですがCPUはRaspi picoからRaspi-5に替わり、カメラが搭載されます。足回りとアーム部は部品点数の低減と組み立て性の改善を図りました。
-### 実装写真
+外形はROBO-ONE Beginners auto型と同じですがCPUはRaspi picoからRaspi-5に替わり、カメラが搭載されます。足回りとアーム部は部品点数の低減と組み立て性の改善を図りました。Raspi5を使用し深層学習を走らせることから電力消費増と発熱への対応とバッテリの容量アップ品の搭載が可能なものとしました。
+#### 実装写真
 ![VisionAI](pics_mech/VisionAI.png)
-### 3D図
+#### 3D図
 ![VisionAI](pics_mech/pi5_Vision_Asy_3D.jpg)
 
 ## 2.Raspi5 CPU case
-Raspi5を使用し深層学習を走らせることから冷却系の考慮とバッテリへの容量アップが搭載可能なものとしました。外形はautoのpico CPU caseと同じサイズとしました。
-今回後部のPSDブラケットはCPU caseと一体としました。前方は分離型としTofセンサーは廃止しカメラで対応することとします。
-
+外形はROBO-ONE Beginners autoのpico CPU caseと同じサイズとしました。後部のPSDブラケットはCPU caseと一体化、前方は分離型のままでTofセンサーBKTは廃止しカメラで対応することとします。
+#### CPU case
 ![VisionAI](pics_mech/CPU_case.png)
+### CPU case cover
 ![VisionAI](pics_mech/CPU_cover.png)
-
-
-![VisionAI](pics_mech/psd1_bkt.png)
+### PSD BKT
 ![VisionAI](pics_mech/psd2_bkt.png)
 
 
