@@ -67,7 +67,7 @@ wheelは1partsとしました。O-ringを入れることで完成です。
 
 O-ringは以下より購入可能です。
 
-[O-ring](https://www.amazon.co.jp/dp/B07W3BR9TY?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
+[5個入り Oリング ニトリルゴム 50mm x 60mm x 5mm ブラック](https://www.amazon.co.jp/dp/B07W3BR9TY?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 サーボモータにはサーボホーンに直接取り付けることができます。ねじはM2-12mmを使用してください。
 ![VisionAI](pics_mech/ServoTire.jpg) 
