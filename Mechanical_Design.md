@@ -106,9 +106,8 @@ CPUカバーの締め付けを繰り返すとねじが馬鹿になるのでイ�
 
 バッテリの交換性向上のためねじ取り付けはやめ、パッチンと挿入できるようにしました。バッテリーを取り際したらカバーを下部より押し込んでください。外すときは上部の半円の切り欠き部に指を入れ引っ張り外してください。
 
-![VisionAI](pics_mech/BatteryCover.jpg)
 ![VisionAI](pics_mech/Battery_cover.png)
+![VisionAI](pics_mech/set_cover.jpg)
 
- 
 ### stlデータ
 3dprinterで使用できるstlファイルはstlフォルダーにありますのでご利用ください。
