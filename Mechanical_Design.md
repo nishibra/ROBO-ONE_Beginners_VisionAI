@@ -34,13 +34,14 @@ Pan servo bktにはPan用サーボモーターを4本のM2-5mmで締め付けま
 
 ![VisionAI](pics_mech/Pan_stand.png)
 
-#### 組み立て方
+#### 3D-printのセットについて
+Pan_standを3dプリンターで製作する場合はBrimをつけ、写真のようにセットします。
 ![VisionAI](pics_mech/How2set.jpg)
 
-#### tilt bkt
+#### tilt_bkt Head
 ![VisionAI](pics_mech/Tilt_bkt.png)
 
-#### arm bkt
+#### arm
 ![VisionAI](pics_mech/kote_v1.png)
 
 
