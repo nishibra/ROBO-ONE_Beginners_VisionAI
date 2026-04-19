@@ -3,6 +3,14 @@
 - cpu: Raspi5 16M csi
 - Hat:電源 serial i2c fan rtc
 
+#### Raspi5
+![VisionAI](pics_mech/VisionAI.png)
+
+#### Hat
+![VisionAI](pics_mech/pi5_Vision_Asy_3D.png)
+
+
+
 ## HAT_for_Raspi5
 
 https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
