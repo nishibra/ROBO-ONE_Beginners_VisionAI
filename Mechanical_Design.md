@@ -1,9 +1,10 @@
 ### ROBO-ONE_Beginners_VisionAI
 # Mechanical_Design
 
-## 1.全体デザイン
+## 1.コンセプト
+このロボットはRaspberry Pi 5を使った画像処理やAIの学習向けの初心者のためのロボットです。
 外形はROBO-ONE Beginners auto型と同じですがCPUはRaspi picoからRaspi-5に替わり、カメラが搭載されます。足回りとアーム部は部品点数の低減と組み立て性の改善を図りました。Raspi5を使用し深層学習を走らせることから電力消費増と発熱への対応とバッテリの容量アップ品の搭載が可能なものとしました。
-#### 実装写真
+#### 全体写真
 ![VisionAI](pics_mech/VisionAI.png)
 #### 3D図
 ![VisionAI](pics_mech/pi5_Vision_Asy_3D.jpg)
