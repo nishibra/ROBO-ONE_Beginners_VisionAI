@@ -25,9 +25,13 @@ CPU case coverはCPU caseに4本のM2.5-8mmで締め付けます。更にアー�
 ![VisionAI](pics_mech/CPU_cover.png)
 
 ## 3.アーム廻り
+アーム廻りは写真のように組み立てます。
+
 ![VisionAI](pics_mech/SetCamera2.jpg)
 
-#### yhoo servo bkt
+#### Pan servo bkt
+Pan servo bktにはPan用サーボモーターを4本のM2-5mmで締め付けます。CPU case coverとPan servo bktは4本のM2-10mmスクリューねじで締め付けます。
+
 ![VisionAI](pics_mech/Pan_stand.png)
 
 #### 組み立て方
