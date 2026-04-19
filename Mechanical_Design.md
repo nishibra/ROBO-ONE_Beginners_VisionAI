@@ -7,7 +7,7 @@
 #### 全体写真
 ![VisionAI](pics_mech/VisionAI.png)
 #### 3D図
-![VisionAI](pics_mech/pi5_Vision_Asy_3D.jpg)
+![VisionAI](pics_mech/pi5_Vision_Asy_3D.png)
 
 ## 2.CPU case
 外形はROBO-ONE Beginners autoのpico CPU caseと同じサイズとしました。後部のPSDブラケットはCPU caseと一体化、前方は分離型のままでTofセンサーBKTは廃止しカメラで対応することとします。
