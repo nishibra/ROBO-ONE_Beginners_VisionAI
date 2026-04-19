@@ -2,20 +2,23 @@
 # Mechanical_Design
 
 ## 1.コンセプト
-このロボットはRaspberry Pi 5を使った画像処理やAIの学習向けの初心者のためのロボットです。
-外形はROBO-ONE Beginners auto型と同じですがCPUはRaspi picoからRaspi-5に替わり、カメラが搭載されます。足回りとアーム部は部品点数の低減と組み立て性の改善を図りました。Raspi5を使用し深層学習を走らせることから電力消費増と発熱への対応とバッテリの容量アップ品の搭載が可能なものとしました。
+このロボットはRaspberry Pi 5を使った画像処理やAIの学習向けのロボットです。
+外形寸法はROBO-ONE Beginners auto型と同じですがCPUはRaspi picoからRaspi-5に替わり、カメラが搭載されます。足回りとアーム部は部品点数の低減と組み立て性の改善を図りました。Raspi5を使用し深層学習を走らせることから電力消費増と発熱への対応とバッテリの容量アップ品の搭載が可能なものとしました。
 #### 全体写真
 ![VisionAI](pics_mech/VisionAI.png)
 #### 3D図
 ![VisionAI](pics_mech/pi5_Vision_Asy_3D.png)
 
 ## 2.CPU case
-外形はROBO-ONE Beginners autoのpico CPU caseと同じサイズとしました。後部のPSDブラケットはCPU caseと一体化、前方は分離型のままでTofセンサーBKTは廃止しカメラで対応することとします。
+外形はROBO-ONE Beginners autoのpico CPU caseと同じサイズとしました。後部のPSD用ブラケットはCPU caseと一体化、前方は分離型のままでTofセンサーBKTは廃止しカメラで対応することとします。
 #### CPU case
-CPU case cover締め付けボスに2.5mmインサートを挿入しておきます。挿入方法はROBO-ONE Beginners autoと同じですのでご参照ください。
+CPU case cover締め付けボスにM2.5のインサートを挿入しておきます。挿入方法はROBO-ONE Beginners autoと同じですのでそちらをご参照ください。
 CPUはM2.5-8mmのねじでケース下より締め付けます。事前にCPUとハットマウント用ディスタンスをねじM2.5-4mmのねじで締め付けておきます。
 
 ![VisionAI](pics_mech/CPU_case.png)
+![VisionAI](pics_mech/cpu_and_case.jpg)
+
+
 ### PSD BKT
 PSD BKTはCPU caseにM2-5mmのスクリューねじでねじ止めします。
 
