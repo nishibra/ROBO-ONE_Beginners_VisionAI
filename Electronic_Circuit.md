@@ -9,6 +9,7 @@
 #### Hat
 ![VisionAI](pics_elec/raspi_camera.jpg)
 
+![VisionAI](pics_elec/bno055.png)
 
 
 ## HAT_for_Raspi5
