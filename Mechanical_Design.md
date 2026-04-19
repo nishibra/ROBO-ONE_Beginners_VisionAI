@@ -47,18 +47,17 @@ Pan_standを3dプリンターで製作する場合はBrimをつけ、写真の�
 
 
 
-### armとHeadは同じ
+### カメラの取り付け
 
 ![VisionAI](pics_mech/SetCamera.jpg)
 
 
-![VisionAI](pics_mech/arm_bkt.png)
+
 ![VisionAI](pics_mech/camera_cover.png)
 
 
 
-![VisionAI](pics_mech/doorn.png)
-![VisionAI](pics_mech/head.png)
+
 
 ---
 ![VisionAI](pics_mech/ins.png)
