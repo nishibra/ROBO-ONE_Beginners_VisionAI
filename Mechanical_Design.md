@@ -17,26 +17,23 @@
 ![VisionAI](pics_mech/psd2_bkt.png)
 
 
-### CPU cover
-
-![VisionAI](pics_mech/CPU_cover.png)
+## 3.アーム廻り
 
 
-### yhoo servo bkt
+#### yhoo servo bkt
 ![VisionAI](pics_mech/Pan_stand.png)
 
-
+#### 組み立て方
 ![VisionAI](pics_mech/How2set.jpg)
 
-
-
-### tilt bkt
+#### tilt bkt
 ![VisionAI](pics_mech/Tilt_bkt.png)
 
-### arm bkt
+#### arm bkt
 ![VisionAI](pics_mech/kote_v1.png)
 
 ### PSDセンサーBKT
+
 
 ### armとHeadは同じ
 
