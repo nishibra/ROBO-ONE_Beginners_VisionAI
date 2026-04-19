@@ -99,15 +99,13 @@ O-ringは以下より購入可能です。
 CPUケースの取り付けボス部はねじを埋め込みます。
 CPUカバーの締め付けを繰り返すとねじが馬鹿になるのでインサートを使用しました。M2.5を使用しています。
 
-[動画](https://www.youtube.com/shorts/zL2C9oKePpQ)
-
 ![VisionAI](pics_mech/Body_V.png)
-
 ![VisionAI](pics_mech/body.jpg)
 
 ![VisionAI](pics_mech/set_battery.jpg)
 
-バッテリの交換性向上のためねじ取り付けはやめ、パッチンと挿入できるようにしました。バッテリーを取り際したらカバーを下部より押し込んでください。外すときは上部の半円の切り欠き部に指を入れ引っ張り外してください。
+### Battery cover
+バッテリの交換性向上のため、Battery coverのねじ止めはやめ、パッチンと挿入できるようにしました。バッテリーを交換したらカバーの片側を挿入し反対側を押し込んでください。外すときは上部の半円の切り欠き部に指を入れ引っ張り外してください。
 
 ![VisionAI](pics_mech/Battery_cover.png)
 ![VisionAI](pics_mech/set_cover.jpg)
