@@ -12,12 +12,15 @@
 #### CPU case
 CPU case cover締め付けボスに2.5mmインサートを挿入しておきます。挿入方法はROBO-ONE Beginners autoと同じですのでご参照ください。
 CPUはM2.5-8mmのねじでケース下より締め付けます。事前にCPUとハットマウント用ディスタンスをねじM2.5-4mmのねじで締め付けておきます。
+
 ![VisionAI](pics_mech/CPU_case.png)
-### CPU case cover
-![VisionAI](pics_mech/CPU_cover.png)
 ### PSD BKT
+PSD BKTはCPU caseにM2-5mmのスクリューねじでねじ止めします。
+
 ![VisionAI](pics_mech/psd2_bkt.png)
 
+### CPU case cover
+![VisionAI](pics_mech/CPU_cover.png)
 
 ## 3.アーム廻り
 
@@ -34,7 +37,7 @@ CPUはM2.5-8mmのねじでケース下より締め付けます。事前にCPUと
 #### arm bkt
 ![VisionAI](pics_mech/kote_v1.png)
 
-### PSDセンサーBKT
+
 
 
 ### armとHeadは同じ
