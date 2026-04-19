@@ -103,7 +103,7 @@ CPUカバーの締め付けを繰り返すとねじが馬鹿になるのでイ�
 
 ![VisionAI](pics_mech/Body_V.png)
 
-![VisionAI](pics_mech/Body_V.png)
+![VisionAI](pics_mech/body.jpg)
 
 ![VisionAI](pics_mech/set_battery.jpg)
 
