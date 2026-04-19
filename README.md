@@ -1,4 +1,4 @@
-# ROBO-ONE_Beginners_Vision_AI型ロボット
+# ROBO-ONE_Beginners_VisionAI型ロボット
 
 操縦型と自律制御型と同じ外形でカメラを搭載したロボットです。CPUにはRaspi5を使用し、深層機械学習や深層強化学習に加えてフィジカルAIなどを戦いを通して学べる教材として提供するものです。
 
