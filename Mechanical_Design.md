@@ -6,7 +6,7 @@
 外形寸法はROBO-ONE Beginners auto型と同じですがCPUはRaspi picoからRaspi-5に替わり、カメラが搭載されます。足回りとアーム部は部品点数の低減と組み立て性の改善を図りました。Raspi5を使用し深層学習を走らせることから電力消費増と発熱への対応とバッテリの容量アップ品の搭載が可能なものとしました。
 #### 全体写真
 ![VisionAI](pics_mech/VisionAI.png)
-#### 3D図
+#### 全体図
 ![VisionAI](pics_mech/pi5_Vision_Asy_3D.png)
 
 ## 2.CPU case
