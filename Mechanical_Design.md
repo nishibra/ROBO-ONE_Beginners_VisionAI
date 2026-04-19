@@ -39,10 +39,14 @@ Pan servo bktにはPan用サーボモーターを4本のM2-5mmで締め付けま
 Pan_standを3dプリンターで製作する場合はBrimをつけ、横方向からプリントするようにします。
 
 #### tilt_bkt Head
-![VisionAI](pics_mech/Tilt_bkt.png)
+Tiltサーボモーターの固定とヘッドを一体化しました。
+
+![VisionAI](pics_mech/head.png)
 
 #### arm
-![VisionAI](pics_mech/kote_v1.png)
+アームとBKTを一体化しました。
+
+![VisionAI](pics_mech/arm.png)
 
 ### カメラの取り付け
 カメラの取り付けは4本のM2-5mmのスクリューねじで締め付けます。
