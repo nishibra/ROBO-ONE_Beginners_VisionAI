@@ -7,7 +7,7 @@
 #### 3D図
 ![VisionAI](pics_mech/pi5_Vision_Asy_3D.jpg)
 
-## 2.Raspi5 CPU case
+## 2.CPU case
 外形はROBO-ONE Beginners autoのpico CPU caseと同じサイズとしました。後部のPSDブラケットはCPU caseと一体化、前方は分離型のままでTofセンサーBKTは廃止しカメラで対応することとします。
 #### CPU case
 CPU case cover締め付けボスに2.5mmインサートを挿入しておきます。挿入方法はROBO-ONE Beginners autoと同じですのでご参照ください。
@@ -36,6 +36,7 @@ Pan servo bktにはPan用サーボモーターを4本のM2-5mmで締め付けま
 
 #### 3D-printのセットについて
 Pan_standを3dプリンターで製作する場合はBrimをつけ、写真のようにセットします。
+
 ![VisionAI](pics_mech/How2set.jpg)
 
 #### tilt_bkt Head
@@ -43,9 +44,6 @@ Pan_standを3dプリンターで製作する場合はBrimをつけ、写真の�
 
 #### arm
 ![VisionAI](pics_mech/kote_v1.png)
-
-
-
 
 ### カメラの取り付け
 カメラの取り付けは4本のM2-5mmのスクリューねじで締め付けます。
@@ -57,7 +55,7 @@ Camera coverはパチッというまで押し込むとロックされます。
 
 ![VisionAI](pics_mech/camera_cover.png)
 
-### 足回り
+### 4.足回り
 
 ロボットのサーボモーターはKRS-3301およびKRS-3302のみを使用することができます。またバッテリーや構造は変更できませんが、センサー、電子回路、ソフトウェアは自に変更できるものとします。__コントローラーを取り付けロボットを操縦する場合は操縦型としても参加できます。また初段以降を受験するロボットはKRS-3300シリーズのすべてのサーボモーターを使用できると同時にバッテリー(Lipoバッテリー2セル/7.4Vなど)は自由に自己責任で使用できます。__
 
@@ -95,7 +93,6 @@ CPUカバーの締め付けを繰り返すとねじが馬鹿になるのでイ�
 ![VisionAI](pics_mech/BatteryCover.jpg)
 ![VisionAI](pics_mech/Battery_cover.png)
 
- Amazon
 
  
 
