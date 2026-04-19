@@ -53,7 +53,7 @@ Tiltサーボモーターの固定とヘッドを一体化しました。
 Head部とArm部には安全や器物保護のためスポンジのドアノブカバーを使用します。
 ピンクと紫は半分に切ってHead部に使用します。赤コーナーの場合はピンク、青コーナーは紫です。その他の色はArmに使ってください。Head部は交換しやすくするために締め代を少なくしています。
 
-![donb](pics_git/doorn.png)  
+![donb](pics_mech/doorn.png)  
 
 [購入先](https://amzn.asia/d/89CXsD9) 
 
@@ -107,10 +107,6 @@ CPUカバーの締め付けを繰り返すとねじが馬鹿になるのでイ�
 ![VisionAI](pics_mech/BatteryCover.jpg)
 ![VisionAI](pics_mech/Battery_cover.png)
 
-
  
-
-
-
-  
 ### stlデータ
+3dprinterで使用できるstlファイルはstlフォルダーにありますのでご利用ください。
