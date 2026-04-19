@@ -46,7 +46,7 @@ Tiltサーボモーターの固定とヘッドを一体化しました。
 #### arm
 アームとBKTを一体化しました。
 
-![VisionAI](pics_mech/arm.png)
+![VisionAI](pics_mech/arm_asy.png)
 
 ### カメラの取り付け
 カメラの取り付けは4本のM2-5mmのスクリューねじで締め付けます。
