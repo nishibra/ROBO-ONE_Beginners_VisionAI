@@ -25,7 +25,7 @@ CPU case coverはCPU caseに4本のM2.5-8mmで締め付けます。更にアー�
 ![VisionAI](pics_mech/CPU_cover.png)
 
 ## 3.アーム廻り
-
+![VisionAI](pics_mech/SetCamera2.jpg)
 
 #### yhoo servo bkt
 ![VisionAI](pics_mech/Pan_stand.png)
@@ -45,7 +45,7 @@ CPU case coverはCPU caseに4本のM2.5-8mmで締め付けます。更にアー�
 ### armとHeadは同じ
 
 ![VisionAI](pics_mech/SetCamera.jpg)
-![VisionAI](pics_mech/SetCamera2.jpg)
+
 
 ![VisionAI](pics_mech/arm_bkt.png)
 ![VisionAI](pics_mech/camera_cover.png)
