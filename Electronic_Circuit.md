@@ -54,6 +54,9 @@ push sw　および LEDはROBO-ONE Beginners autoと同じものを使用しま�
 
 ![sw](pics_elec/sw.jpg)
 
+
+![sw](pics_elec/pb_led.png)
+
 amazonでも入手できます。
 
 [push_sw購入先](https://www.amazon.co.jp/dp/B0D4PX1V4Q?ref=ppx_yo2ov_dt_b_fed_asin_title)
