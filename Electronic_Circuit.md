@@ -33,6 +33,10 @@ https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
 
 [sw購入先]()
 
+![VisionAI](pics_elec/power.png)
+
+
+
 ### CSI camera
 ![VisionAI](pics_elec/raspi_camera.jpg)
 
