@@ -107,6 +107,8 @@ M2.5のインサートを使用しています。
 ![VisionAI](pics_mech/Body_V.png)
 ![VisionAI](pics_mech/body.jpg)
 
+上の写真のようにサーボモーターを配置するとしたの写真のようにバッテリーが搭載でき、重量バランスがとりやくなります。
+
 ![VisionAI](pics_mech/set_battery.jpg)
 
 ### Battery cover
