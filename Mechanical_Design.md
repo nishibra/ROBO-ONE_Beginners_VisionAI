@@ -16,7 +16,7 @@ CPU case cover締め付けボスにM2.5のインサートを挿入しておき�
 CPUはM2.5-8mmのねじでケース下より締め付けます。事前にCPUとハットマウント用ディスタンスをねじM2.5-4mmの上部にねじで締め付けておきます。
 
 ![VisionAI](pics_mech/CPU_case.png)
-![VisionAI](pics_mech/cpu_and_case.jpg)
+![VisionAI](pics_mech/allParts.png)
 
 
 ### PSD BKT
