@@ -4,10 +4,13 @@
 - Hat:電源 serial i2c fan rtc
 
 ### 全体図
+まずはカメラとIMUでどこまでいけるかトライしてみたいと思います。TofセンサーとPSDセンサーは搭載していません。必要なら搭載できるようBKTは準備しました。
 
 ![VisionAI](pics_elec/raspi5.png)
 
 ### Raspi5
+ここではRaspi5を使用します。Raspi4でもほとんどのサンプルは動作しますが遅くです。スタートとして使用するには可能です。メモリーは4G以上あればよ良いでしょう。
+
 ![VisionAI](pics_elec/raspi5.png)
 
 https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
@@ -16,23 +19,26 @@ https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
 #### BTE100B DXHAT
 ![VisionAI](pics_elec/hat.png)
 
-https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT
+[DXHAT購入先](https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT)
 
 #### HeatSink
 ![VisionAI](pics_elec/Heatsink.jpg)
 
-https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
+[Raspi5購入先](https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 #### 電源SW
 ![VisionAI](pics_elec/t_sw.png)
 
+[sw購入先]()
+
 ### CSI camera
 ![VisionAI](pics_elec/raspi_camera.jpg)
+
 
 #### camera: csi
 
 #### Flexible cable
-https://www.amazon.co.jp/dp/B0DNFP5QJR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
+[sw購入先](https://www.amazon.co.jp/dp/B0DNFP5QJR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 ### 入出力
 #### bno055
@@ -41,15 +47,17 @@ https://www.amazon.co.jp/dp/B0DNFP5QJR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 #### push sw
 ![VisionAI](pics_elec/sw.jpg)
 
-https://www.amazon.co.jp/dp/B0D4PX1V4Q?ref=ppx_yo2ov_dt_b_fed_asin_title
+[sw購入先](https://www.amazon.co.jp/dp/B0D4PX1V4Q?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
 #### LED
 
 #### ADC
 
 ### battery
+Zeeeのバッテリーは比較的安定して使用できます。10個1年使用して今のところ問題ありません。
+1350mAhのバッテリーを使用できます。2200mAhのバッテリーも搭載可能です。
 
-:1000mAH
+![VisionAI](pics_elec/battery.jpg)
 
 ## servo:KRS3304-R2
 
