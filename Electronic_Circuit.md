@@ -24,7 +24,7 @@ https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT
 https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 
 #### 電源SW
-![VisionAI](pics_elec/bno055.png)
+![VisionAI](pics_elec/t_sw.png)
 
 ### CSI camera
 ![VisionAI](pics_elec/raspi_camera.jpg)
