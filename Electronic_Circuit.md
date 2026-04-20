@@ -46,7 +46,7 @@ https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
 #### bno055
 ![bno055](pics_elec/bno055.png)
 
-
+![bno055](pics_elec/cpucase_bno.png)
 
 
 #### push sw　および LED
