@@ -8,7 +8,7 @@
 ### 全体図
 まずはカメラとIMUでどこまでいけるかトライしてみたいと思います。TofセンサーとPSDセンサーは搭載していません。必要なら搭載できるようBKTは準備しました。
 
-![VisionAI](pics_elec/raspi5.png)
+![VisionAI](pics_elec/allParts.png)
 
 ### Raspi5
 ここではRaspi5を使用します。Raspi4でもほとんどのサンプルは動作しますが遅くです。スタートとして使用するには可能です。メモリーは4G以上あればよ良いでしょう。
