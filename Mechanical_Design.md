@@ -88,10 +88,10 @@ O-ringは以下より購入可能です。
 ![VisionAI](pics_mech/ServoTire.jpg) 
   
 ### シャーシ
-キャスタにはスライダーを採用しました。滑りやすくなり走行抵抗や走行音が少なくなりました。スライターはシャーシの取り付け部丸い部分のセンターに取り付けてます。ボディとの取り付けは2mのスクリューねじで取り付けます。
+キャスタにはスライダーを採用しました。滑りやすくなり走行抵抗や走行音が少なくなりました。スライターはシャーシの取り付け部丸い部分のセンターに取り付けてます。ボディとの取り付けはM2-10mmのスクリューねじで取り付けます。
 
-![VisionAI](pics_mech/slider.jpg)
 ![VisionAI](pics_mech/Chassis_V_70.png)
+![VisionAI](pics_mech/slider.jpg)
 
 [スライダー購入先](https://www.amazon.co.jp/dp/B0DFGZZ4GH?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
