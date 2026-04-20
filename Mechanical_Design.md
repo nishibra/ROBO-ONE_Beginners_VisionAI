@@ -38,6 +38,7 @@ CPU case coverはCPU caseに4本のM2.5-8mmねじで締め付けます。更に�
 Pan servo bktにはPan用サーボモーターを4本のM2-5mmで締め付けます。CPU case coverとPan servo bktは4本のM2-10mmスクリューねじで締め付けます。
 
 ![VisionAI](pics_mech/Pan_stand.png)
+![VisionAI](pics_mech/panAsy.png)
 
 Pan_standを3dプリンターで製作する場合はBrimをつけ、横方向からプリントするようにします。
 
@@ -94,7 +95,7 @@ O-ringは以下より購入可能です。
 キャスタ部にはスライダーを採用しました。滑りやすくなり走行抵抗や走行音が少なくなりました。スライダーはシャーシの取り付け部丸い部分のセンターに取り付けてます。このピッチが90mm,70mm,50mmとあり、昇段昇級の審査に使われます。ボディとの取り付けはM2-10mmのスクリューねじで取り付けます。
 
 ![VisionAI](pics_mech/Chassis_V_70.png)
-![VisionAI](pics_mech/slider.jpg)
+![VisionAI](pics_mech/set_slider.png)
 
 [スライダー購入先](https://www.amazon.co.jp/dp/B0DFGZZ4GH?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
