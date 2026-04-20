@@ -68,7 +68,8 @@ Head部とArm部には安全や器物保護のためスポンジのドアノブ�
 #### camera cover
 Camera coverはパチッというまで押し込むと固定されます。
 
-![VisionAI](pics_mech/camera_cover.png)
+![VisionAI](pics_mech/cameraWOcover.png)
+![VisionAI](pics_mech/cameraWcover.png)
 
 ### 4.足回り
 
