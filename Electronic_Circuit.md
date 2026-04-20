@@ -3,6 +3,10 @@
 - cpu: Raspi5 16M csi
 - Hat:電源 serial i2c fan rtc
 
+### 全体図
+
+![VisionAI](pics_elec/raspi5.png)
+
 ### Raspi5
 ![VisionAI](pics_elec/raspi5.png)
 
@@ -15,6 +19,8 @@ https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
 https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT
 
 #### HeatSink
+![VisionAI](pics_elec/Heatsink.jpg)
+
 https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 
 #### 電源SW
