@@ -63,12 +63,11 @@ Head部とArm部には安全や器物保護のためスポンジのドアノブ�
 ### カメラの取り付け
 カメラの取り付けは4本のM2-5mmのスクリューねじで締め付けます。
 
-![VisionAI](pics_mech/SetCamera.jpg)
+![VisionAI](pics_mech/cameraWOcover.png)
 
 #### camera cover
 Camera coverはパチッというまで押し込むと固定されます。
 
-![VisionAI](pics_mech/cameraWOcover.png)
 ![VisionAI](pics_mech/cameraWcover.png)
 
 ### 4.足回り
