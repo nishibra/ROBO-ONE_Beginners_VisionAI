@@ -46,7 +46,7 @@ Raspi5とカメラを使用し画像処理や深層強化学習などフィジ�
 
 このスイッチは以下より入手できます。
 
-[sw購入先]()
+[sw購入先](https://www.amazon.co.jp/dp/B09QJQ55F8?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 ### CSI camera
 ![VisionAI](pics_elec/raspi_camera.jpg)
