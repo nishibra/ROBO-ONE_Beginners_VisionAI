@@ -55,6 +55,8 @@ Raspi5とカメラを使用し画像処理や深層強化学習などフィジ�
 
 #### camera: csi
 
+[160°Cam購入先](https://www.amazon.co.jp/dp/B0D2BMH1BB?ref=ppx_yo2ov_dt_b_fed_asin_title)
+
 #### Flexible cable
 [sw購入先](https://www.amazon.co.jp/dp/B0DNFP5QJR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
