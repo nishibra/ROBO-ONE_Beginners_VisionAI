@@ -30,10 +30,10 @@ https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
 [DXHAT購入先](https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT)
 
 #### HeatSink
+画像処理を行うには電力消費が増大するためヒートシンクとFanの搭載が不可欠です。
+以下のヒートシンクをRaspi5の赤丸部に貼り付け、ハットを取り付けてください。
+
 ![VisionAI](pics_elec/Heatsink.jpg)
-
-ヒートシンクはRaspi5の赤丸部に貼り付けてください。
-
 ![VisionAI](pics_elec/paspi5heat.png)
 
 [Raspi5購入先](https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
