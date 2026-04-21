@@ -62,7 +62,7 @@ push sw　および LEDはROBO-ONE Beginners autoと同じものを使用しま�
 
 ![sw](pics_elec/sw.jpg)
 
-![sw](pics_elec/sw.jpg)
+![sw](pics_elec/pushBled.png)
 
 
 ![sw](pics_elec/pb_led.png)
