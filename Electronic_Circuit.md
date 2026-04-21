@@ -2,11 +2,15 @@
 # Electronic_Circuit
 
 ## 概要
-- cpu: Raspi5 16M csi
-- Hat:電源 serial i2c fan rtc
+Raspi5とカメラを使用し画像処理や深層強化学習などフィジカルAIの学習が可能なものとします。
+- cpu: Raspi5 RAM 4Gbyte以上　SDカード 64Gbyte以上
+- Raspi Camera csi接続
+- Hat:5v電源 serial servo control/ i2c/ fan control/ RTC
+- IMU BNO055など i2c接続
+- ADC ADS1115など i2c接続
 
 ### 全体図
-まずはカメラとIMUでどこまでいけるかトライしてみたいと思います。TofセンサーとPSDセンサーは搭載していません。必要なら搭載できるようBKTは準備しました。
+まずはカメラとIMUでどこまでいけるかトライしてみたいと思います。TofセンサーとPSDセンサーは搭載していません。PSDセンサーは必要なら搭載できるようBKTは準備しました。ハットを使用しできるだけはんだ付けの少なくしたいと思います。
 
 ![VisionAI](pics_elec/allParts.png)
 
