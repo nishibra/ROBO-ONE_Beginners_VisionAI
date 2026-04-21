@@ -13,11 +13,10 @@
 外形寸法はROBO-ONE Beginners autoのpico CPU caseと同じサイズに収めました。後部のPSD用ブラケットはCPU caseと一体化、前方は分離型のままでTofセンサーは廃止しカメラを使った画像処理で対応することとします。
 #### CPU case
 CPU case cover締め付けボスにM2.5のインサートを挿入しておきます。挿入方法はROBO-ONE Beginners autoと同じですのでそちらをご参照ください。
-CPUはM2.5-8mmのねじでケース下より締め付けます。事前にCPUとハットマウント用ディスタンスをねじM2.5-4mmの上部にねじで締め付けておきます。
+CPUはM2.5-8mmのねじでケース下より締め付けます。事前にヒートシンクを取り付けたCPUボードとハットをマウント用ディスタンスにねじM2.5-4mmをハット上部にねじで締め付けておきます。
 
 ![VisionAI](pics_mech/CPU_case.png)
 ![VisionAI](pics_mech/allParts.png)
-![VisionAI](pics_mech/distance.png)
 ![VisionAI](pics_mech/distance.png)
 
 ### PSD BKT
