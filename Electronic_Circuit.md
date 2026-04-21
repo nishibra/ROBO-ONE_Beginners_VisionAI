@@ -44,6 +44,7 @@ https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
 ### CSI camera
 ![VisionAI](pics_elec/raspi_camera.jpg)
 
+![VisionAI](pics_elec/setCam.png)
 
 #### camera: csi
 
