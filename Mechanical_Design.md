@@ -17,7 +17,8 @@ CPUはM2.5-8mmのねじでケース下より締め付けます。事前にCPUと
 
 ![VisionAI](pics_mech/CPU_case.png)
 ![VisionAI](pics_mech/allParts.png)
-
+![VisionAI](pics_mech/distance.png)
+![VisionAI](pics_mech/distance.png)
 
 ### PSD BKT
 PSD BKTはCPU caseにM2-5mmのスクリューねじでねじ止めします。
