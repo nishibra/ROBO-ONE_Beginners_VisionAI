@@ -22,6 +22,8 @@ Raspi5とカメラを使用し画像処理や深層強化学習などフィジ�
 https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
 
 ### Hat
+はんだ付けの極力避けるため以下のHatを使用します。Serial servo controlや電源、Fanが搭載されており、コンパクトで搭載性が良いものです。
+
 #### BTE100B DXHAT
 ![VisionAI](pics_elec/hat.png)
 
