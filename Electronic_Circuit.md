@@ -37,13 +37,14 @@ https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
 [Raspi5購入先](https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 #### 電源SW
+電源スイッチはHatの電源入力とバッテリー接続コネクターの間に接続し写真のように取り付けます。
+
 ![VisionAI](pics_elec/t_sw.png)
-
-[sw購入先]()
-
 ![VisionAI](pics_elec/power.png)
 
+このスイッチは以下より入手できます。
 
+[sw購入先]()
 
 ### CSI camera
 ![VisionAI](pics_elec/raspi_camera.jpg)
