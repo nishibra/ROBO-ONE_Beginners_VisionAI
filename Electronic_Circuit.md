@@ -12,31 +12,31 @@ Raspi5とカメラを使用し画像処理や深層強化学習などフィジ�
 ### 全体図
 まずはカメラとIMUでどこまでいけるかトライしてみたいと思います。TofセンサーとPSDセンサーは搭載していません。PSDセンサーは必要なら搭載できるようBKTは準備しました。ハットを使用しできるだけはんだ付けの少なくしたいと思います。
 
-![VisionAI](pics_elec/allParts.png)
+![RaspiAll](pics_elec/allParts.png)
 
 ### Raspi5
-ここではRaspi5を使用します。Raspi4でもほとんどのサンプルは動作しますが遅くです。スタートとして使用するには可能です。メモリーは4G以上あればよ良いでしょう。
+ここではRaspi5を使用します。Raspi4でもほとんどのサンプルは動作しますが遅くです。スタートとして使用するには可能です。メモリーは4G以上あれば良いでしょう。
 
-![VisionAI](pics_elec/raspi5.png)
+![Raspi5](pics_elec/raspi5.png)
 
-https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
+[Raspi5購入先](https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
 ### Hat
 はんだ付けの極力避けるため以下のHatを使用します。Serial servo controlや電源、Fanが搭載されており、コンパクトで搭載性が良いものです。
 
-#### BTE100B DXHAT
-![VisionAI](pics_elec/hat.png)
+#### BTE100B
+![hat](pics_elec/hat.png)
 
-[DXHAT購入先](https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT)
+[HAT購入先](https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT)
 
 #### HeatSink
 画像処理を行うには電力消費が増大するためヒートシンクとFanの搭載が不可欠です。
 以下のヒートシンクをRaspi5の赤丸部に貼り付け、ハットを取り付けてください。
 
-![VisionAI](pics_elec/Heatsink.jpg)
-![VisionAI](pics_elec/paspi5heat.png)
+![sink](pics_elec/Heatsink.jpg)
+![Pi5Heat](pics_elec/paspi5heat.png)
 
-[Raspi5購入先](https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
+[Heatsink購入先](https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 #### 電源SW
 電源スイッチはHatの電源入力とバッテリー接続コネクターの間に接続し写真のように取り付けます。
