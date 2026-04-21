@@ -26,6 +26,8 @@ https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title
 #### HeatSink
 ![VisionAI](pics_elec/Heatsink.jpg)
 
+![VisionAI](pics_elec/Heatsink.jpg)
+
 [Raspi5購入先](https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 #### 電源SW
