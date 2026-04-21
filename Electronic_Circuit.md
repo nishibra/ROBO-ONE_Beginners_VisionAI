@@ -91,7 +91,7 @@ KRS-3300シリーズのすべてのサーボモーターを使用できると同
 
 [サーボ購入先](https://kondo-robot.com/product/krs-3304r2-ics)
 
-![servo](pics_elec/battery.jpg)
+![servo](pics_elec/set_servo.png)
 
 ---
 #### config.txtに追記する情報
