@@ -2,7 +2,7 @@
 # Electronic_Circuit
 
 ## 概要
-Raspi5とカメラを使用し画像処理や深層強化学習などフィジカルAIの学習が可能なものとします。
+Raspi5とカメラを使用し画像処理や深層強化学習などフィジカルAIの学習が電子回路に詳しくなくても可能なものとします。
 - cpu: Raspi5 RAM 4Gbyte以上　SDカード 64Gbyte以上
 - Raspi Camera csi接続
 - Hat:5v電源 serial servo control/ i2c/ fan control/ RTC
@@ -10,7 +10,7 @@ Raspi5とカメラを使用し画像処理や深層強化学習などフィジ�
 - ADC ADS1115など i2c接続
 
 ### 全体図
-まずはカメラとIMUでどこまでいけるかトライしてみたいと思います。TofセンサーとPSDセンサーは搭載していません。PSDセンサーは必要なら搭載できるようBKTは準備しました。ハットを使用しできるだけはんだ付けの少なくしたいと思います。
+まずはカメラとIMUでどこまでいけるかトライして頂けることを期待します。TofセンサーとPSDセンサーは搭載していません。PSDセンサーは必要なら搭載できるようBKTは準備しました。ハットを使用しできるだけはんだ付けを少なくしました。
 
 ![RaspiAll](pics_elec/allParts.png)
 
@@ -22,7 +22,7 @@ Raspi5とカメラを使用し画像処理や深層強化学習などフィジ�
 [Raspi5購入先](https://www.amazon.co.jp/dp/B0CPDJ8FNK?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
 ### Hat
-はんだ付けの極力避けるため以下のHatを使用します。Serial servo controlや電源、Fanが搭載されており、コンパクトで搭載性が良いものです。
+はんだ付けの極力避けるため以下のHatを使用します。Serial servo controlや電源、Fanが搭載されており、コンパクトで搭載性が非常に良いものです。
 
 #### BTE100B
 ![hat](pics_elec/hat.png)
@@ -31,15 +31,16 @@ Raspi5とカメラを使用し画像処理や深層強化学習などフィジ�
 
 #### HeatSink
 画像処理を行うには電力消費が増大するためヒートシンクとFanの搭載が不可欠です。
-以下のヒートシンクをRaspi5の赤丸部に貼り付け、ハットを取り付けてください。
+以下のヒートシンクをRaspi5の赤丸部に貼り付けた後にハットを取り付けてください。
 
 ![sink](pics_elec/Heatsink.jpg)
 ![Pi5Heat](pics_elec/paspi5heat.png)
 
 [Heatsink購入先](https://www.amazon.co.jp/dp/B0F8V6TK9M?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
-#### 電源SW
-電源スイッチはHatの電源入力とバッテリー接続コネクターの間に接続し写真のように取り付けます。
+#### 電源廻り
+電源スイッチはHatの電源入力とバッテリー接続コネクターの間に接続し写真のように取り付けます。ただしOSを週利用したのち電源スイッチを切るようにしてください。
+右側のまどからRaspi5のスイッチが見えます。PCと接続していない場合はこのスイッチを長押ししてください。同じ窓から見えるLEDが赤くなってから電源を落として下さい。
 
 ![VisionAI](pics_elec/t_sw.png)
 ![VisionAI](pics_elec/power.png)
@@ -49,21 +50,34 @@ Raspi5とカメラを使用し画像処理や深層強化学習などフィジ�
 [sw購入先](https://www.amazon.co.jp/dp/B09QJQ55F8?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 ### CSI camera
+Raspiカメラは以下を使用します。
 ![VisionAI](pics_elec/raspi_camera.jpg)
+
+ハットを搭載する前にcam/disp 0にフラットケーブルを挿入しておきます。
 
 ![VisionAI](pics_elec/setCam.png)
 
 #### camera: csi
+Raspiカメラには以下のものがあります。レンズはFOV違いでいろいろありますが、130°程度が画像のひずみ変形も少なく使いやすいでしょう。
+
 [Raspberry Pi 5 カメラ 5MP 1080P 130°](https://ja.aliexpress.com/item/1005006790000090.html?pvid=09bf0cac-d03c-4739-89cf-66528290c2b3&pdp_ext_f=%7B%22ship_from%22%3A%22CN%22%2C%22sku_id%22%3A%2212000038354130022%22%7D&scm=1007.25281.487460.0&scm-url=1007.25281.487460.0&scm_id=1007.25281.487460.0&pdp_npi=6%40dis%21JPY%21%EF%BF%A5+781%21%EF%BF%A5+248%21%21%2132.86%2110.43%21%40213ba0c517767581979563570e81e7%2112000038354130022%21gdf%21JP%213303977755%21X%211%210%21n_tag%3A-29919%3Bd%3Aca1dc3a9%3Bm03_new_user%3A-29895%3BpisId%3A5000000204357513&mainPicRatio=1&spm=a2g0o.tm1000062330.3974233040.d80&aecmd=true)
 
 [8メガピクセル1080Pミニカメラモジュール160°広角 購入先](https://www.amazon.co.jp/dp/B0D2BMH1BB?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
 #### Flexible cable
+フラットケーブルは15cmの長さのものを使用します。
+
 [CSIケーブル 15-22pin FPC フレキシブル 100mm購入先](https://www.amazon.co.jp/dp/B0DNFP5QJR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 ### 入出力
-#### bno055
+#### IMU bno055
+I2CにQWICコネクターで接続します。
+
 ![bno055](pics_elec/bno055.png)
+
+[Qwic I2C コネクター購入先](https://www.amazon.co.jp/elechawk-%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%82%AD%E3%83%83%E3%83%88-SparkFun-%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89-%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88/dp/B08HQ1VSVL/ref=sr_1_2?crid=3W19Q2ONT0LIL&dib=eyJ2IjoiMSJ9.YuuEcK_ekR-oT7oZ3T7B2-mq60LeJaWuKdOGL3M54VnI3GcrDBERKl2zRIZOBNqdtYEHiFv1bQHApo6wdtef7-8knjGdsJ9VCkPyDRP71-a2E4vpPMQfPdNNscUzjM7IGbLyMHZ4Sk_ukKUVycNb1zesaJzorhxZp5hz8CVKoW_py8efPvRY2S3L8P7MFuVT4RiGDV6PQpJ-GR-KzpB6Tm-DlEZFvEeD_FSvOUeK7xCzYIR_5-Uaqe7NriJ0GoW8LwETYkm4vytQUDagfLa-BTmQnajFNz5ro01Tyagn9_o.Sq6qsz4HRhtd0IDGkuFrTUYn0ILrt_truz1L9vYpKCc&dib_tag=se&keywords=qwic+%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB&qid=1776863068&sprefix=qwic+%2Caps%2C260&sr=8-2&ufe=app_do%3Aamzn1.fos.bf5b3200-08a5-4406-bf4b-e679e8ebbcc3)
+
+CPU caseには下の写真のように配置します。ロボットの前後がX軸、左右がY軸、基盤面に垂直な方向がZ軸です。
 
 ![bno055](pics_elec/cpucase_bno.png)
 
