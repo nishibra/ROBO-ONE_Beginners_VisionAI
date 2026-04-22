@@ -77,27 +77,28 @@ I2CにQWICコネクターで接続します。
 
 [Qwic I2C コネクター購入先](https://www.amazon.co.jp/elechawk-%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%82%AD%E3%83%83%E3%83%88-SparkFun-%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89-%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88/dp/B08HQ1VSVL/ref=sr_1_2?crid=3W19Q2ONT0LIL&dib=eyJ2IjoiMSJ9.YuuEcK_ekR-oT7oZ3T7B2-mq60LeJaWuKdOGL3M54VnI3GcrDBERKl2zRIZOBNqdtYEHiFv1bQHApo6wdtef7-8knjGdsJ9VCkPyDRP71-a2E4vpPMQfPdNNscUzjM7IGbLyMHZ4Sk_ukKUVycNb1zesaJzorhxZp5hz8CVKoW_py8efPvRY2S3L8P7MFuVT4RiGDV6PQpJ-GR-KzpB6Tm-DlEZFvEeD_FSvOUeK7xCzYIR_5-Uaqe7NriJ0GoW8LwETYkm4vytQUDagfLa-BTmQnajFNz5ro01Tyagn9_o.Sq6qsz4HRhtd0IDGkuFrTUYn0ILrt_truz1L9vYpKCc&dib_tag=se&keywords=qwic+%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB&qid=1776863068&sprefix=qwic+%2Caps%2C260&sr=8-2&ufe=app_do%3Aamzn1.fos.bf5b3200-08a5-4406-bf4b-e679e8ebbcc3)
 
-CPU caseには下の写真のように配置します。ロボットの前後がX軸、左右がY軸、基盤面に垂直な方向がZ軸です。
+CPU caseには下の写真のように配置します。ロボットの前後がX軸、左右がY軸、基板面に垂直な方向がZ軸です。
 
 ![bno055](pics_elec/cpucase_bno.png)
 
-
 #### push sw　および LED
-push sw　および LEDはROBO-ONE Beginners autoと同じものを使用します。
+push sw　および LEDはROBO-ONE Beginners autoと同じものが使用できます。以下のものも使えamazonでも入手できます。
 
 ![sw](pics_elec/sw.jpg)
 
-![sw](pics_elec/pushBled.png)
+[push_sw購入先](https://www.amazon.co.jp/dp/B0D4PX1V4Q?ref=ppx_yo2ov_dt_b_fed_asin_title)
+
+回路図は以下の通りで、スイッチのプルアップ抵抗はRaspi5の内部でブルアップすれば取り付ける必要はありません。
 
 ![sw](pics_elec/pb_c.png)
 ![sw](pics_elec/led_c.png)
 
-amazonでも入手できます。
+以下のようにはんだ付けし熱収縮チューブで被覆します。
 
-[push_sw購入先](https://www.amazon.co.jp/dp/B0D4PX1V4Q?ref=ppx_yo2ov_dt_b_fed_asin_title)
+![sw](pics_elec/pushBled.png)
 
 #### ADC
-Raspi5ではI2Cを通してADCを接続し、PSDからのアナログ地を距離に変換して使用します。
+Raspi5ではI2Cを通してADCを接続し、PSDからのアナログ値を距離に変換して使用します。
 
 ![ADC](pics_elec/ADS1115.png)
 
