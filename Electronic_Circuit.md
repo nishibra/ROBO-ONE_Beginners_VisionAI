@@ -109,10 +109,12 @@ Zeeeのバッテリーは比較的安定して使用できます。10個1年使�
 
 ![Battery](pics_elec/battery.jpg)
 
-## servo:KRS3304-R2
+## servo:KRS3301/KRS3304-R2
 KRS-3300シリーズのすべてのサーボモーターを使用できると同時にバッテリー(Lipoバッテリー2セル/7.4Vなど)は自由に自己責任で使用できます。
 サーボモータについては通常KRS-3301を使用します。倒立伸子を行う場合はKRS3304-R2を使うと良いでしょう。
 サーボの設定はROBO-ONE Beginners autoと同じとしますがトルク特性は以下のように少し変更した方がシミュレーションと会わせやすいでしょう。
+
+![servo](pics_elec/krs3301.png)
 
 [サーボ購入先](https://kondo-robot.com/product/krs-3304r2-ics)
 
