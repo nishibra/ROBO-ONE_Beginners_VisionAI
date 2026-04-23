@@ -122,12 +122,13 @@ pip install numpy
 ---
 
 ## KRSのコントロール
-
+krs-driver_rp5.pyはROBO-ONE Beginners autoのシリアルポートを変更したものです。使い方は同じです。
 
 ## IMU I2C取り込み
-
+BNO055をi2cのボートと使用するライブラリーを変更すれば、使用方法はROBO-ONE Beginners autのものと同じです。
 
 ## ADC PSD取り込み
+Raspi5にはADCが無いので、i2c接続のADCを使用します。
 Raspberry Pi 5（ラズパイ5）で高性能な16bit ADC（アナログ-デジタルコンバータ）である**ADS1115**を使用する方法を解説します。
 ラズパイ5では、これまでのモデルと異なりGPIOの制御方式が変更されていますが、Pythonのライブラリ（Adafruit CircuitPython）を使用すれば、従来通り簡単に扱うことができます。
 
@@ -216,6 +217,9 @@ RaspiOSに接続します。Raspi ConnectからRaspiに接続します。Bluetoo
 
 [購入先](https://www.amazon.co.jp/8BitDo-Lite-Switch%E3%80%81Switch-Lite%E3%80%81Android%E3%80%81Raspberry-Pi%EF%BC%88%E3%82%BF%E3%83%BC%E3%82%B3%E3%82%A4%E3%82%BA%EF%BC%89%E7%94%A8%E3%81%AEBluetooth%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%91%E3%83%83%E3%83%89/dp/B0B3DH1Z4P/ref=sr_1_3?crid=4B52DUKP1FMS&dib=eyJ2IjoiMSJ9.OMgXZbW6349e7O7MSB6-boH0speacDqBwPyCqMBf8kqQS91cf1NXrwDR8bop-pMxCByB9-rhUF1bvGedgOv1g39QDIIa9sYMVetsjntBhDSK_hW6-0XKEtY26uIXDCuMN7U81XNcx55nFOblcnEwi5SFKfV_DLcoVCtYKewDDWDrqrx7unY3d-oqm0cA6zPx-TH8vGpixUyHmJj9iwIB6sENaFylXbZrnDXNFGfPdcoLssHpvBl25dhW0HUno7fiID_TmOX3Ij7j7z7VuqhMDPu1Vrwp2taQFFCOaVFeJww.ziKejo1l-pDi-VHxZyEiwckld2h1psHbQk91X7XGRIQ&dib_tag=se&keywords=8bitdo%2Blite2&qid=1776910895&sprefix=8bitdo%2Blite%2Caps%2C277&sr=8-3&ufe=app_do%3Aamzn1.fos.bf5b3200-08a5-4406-bf4b-e679e8ebbcc3&th=1)
 
+
+
+
 ---
 
 ## systemd による自動起動の設定手順
@@ -291,16 +295,6 @@ sudo systemctl start my_robot.service
 
 ---
 
-## 注意点：GUIが必要な場合
-
-もしプログラム内で `cv2.imshow` などの**ウィンドウを表示するコード**が含まれている場合、通常の systemd ではエラーになります。その場合は、プログラム側でウィンドウ表示をオフにするか、デスクトップ環境が立ち上がってから実行される `autostart` 方式に切り替える必要があります。
-
-**次は、「プログラムがエラーで落ちた時のログを保存する方法」や「特定のI/Oデバイスが準備できるまで起動を待機させる設定」などについて詳しく解説しましょうか？**
-
-
-ご提示いただいた解説文は、手順の全体像は掴めますが、初めて挑戦する方にとっては「どこでその操作をするのか」「具体的な設定画面はどこか」が少し分かりにくいかもしれません。
-
-以下に、初心者の方でも迷わず進められるよう、情報の補足と整理を行った構成案を作成しました。
 
 ---
 
@@ -309,6 +303,7 @@ sudo systemctl start my_robot.service
 Raspberry Pi Connectを使うと、ブラウザ越しにどこからでもRaspberry Piのデスクトップにアクセスできます。セットアップを以下のステップに分けて解説します。
 
 ### 1. 準備：OSのインストール
+
 
 Raspberry Pi Connectを利用するには、OSのバージョンと種類が重要です。
 
