@@ -66,31 +66,24 @@ i2cdetect -y 1
 ls /dev/ttyAMA0
 
 ```
-
 ---
-
 ## カメラ（rpicam-apps / Picamera2）の使い方
-
 Raspberry Pi 5では従来の `raspistill` ではなく `rpicam-apps` を使用します。
 
 ### 基本コマンド
-
 * プレビュー表示: `rpicam-hello -t 0`
 * カメラ一覧確認: `rpicam-hello --list-cameras`
 * 静止画保存: `rpicam-still -o test.jpg`
 
-### Pythonでの画像処理（重要）
-
+### Pythonでの画像処理
 OpenCVとPicamera2を組み合わせる際、色の並び（色空間）に注意が必要です。
-
-* **色の変換**: Picamera2は **RGB** 形式で画像を取得しますが、OpenCV（cv2）は **BGR** 形式として処理します。
+* 色の変換: Picamera2は RGB形式で画像を取得しますが、OpenCV（cv2）はBGR形式として処理します。
 ```python
 # 変換例
 import cv2
 img_bgr = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2BGR)
-
 ```
-* **フォーマット**: メモリ効率を上げるため、`format='RGB888'` を指定してキャプチャすることを推奨します。
+* フォーマット: メモリ効率を上げるため、`format='RGB888'` を指定してキャプチャすることを推奨します。
 ---
 
 ## 開発環境（venv）の構築
@@ -109,9 +102,7 @@ python3 -m venv venv --system-site-packages
 
 # 有効化（作業開始時に毎回実行）
 source venv/bin/activate
-
 ```
-
 ### 必要なライブラリのインストール
 シミュレーション環境や画像処理のライブラリーをインストールします。mujocoやYoloがRaspi5でも使えます。
 
@@ -207,15 +198,15 @@ except KeyboardInterrupt:
 ```
 
 知っておくと役立つポイント
-**ゲイン（増幅率）の設定**:
+* ゲイン（増幅率）の設定:
     デフォルトでは最大4.096Vまで測定可能です。これより小さい電圧を精密に測りたい場合は、`ads.gain = 2`（最大2.048V）のように設定変更できます。
-**差動入力**:
+* 差動入力:
     2つのピンの電圧差を測る場合は、`AnalogIn(ads, ADS.P0, ADS.P1)` のように指定します。
-**サンプリングレート**:
+* サンプリングレート:
     `ads.data_rate = 860` と設定することで、秒間最大860回の高速サンプリングが可能です。
 ---
 
-Game controllerの接続
+## Game controllerの接続
 RaspiOSに接続します。
 
 
