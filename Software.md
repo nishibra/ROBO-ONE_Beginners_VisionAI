@@ -16,6 +16,8 @@
 ### 1. SDカードの作成
 Raspberry Pi Imagerを使用し、OSを選択します。
 
+![gameController](pics_prog/pi4_1.jpg)
+
 * **OS**: Raspberry Pi OS (64-bit) ※Trixieが選択可能な場合
 * **設定**: 書き込み時に「OSカスタマイズ」でホスト名、Wi-Fi、SSHを有効にしておくと、その後の作業がスムーズです。
 
