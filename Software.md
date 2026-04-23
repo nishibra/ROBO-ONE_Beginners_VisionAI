@@ -128,21 +128,115 @@ pip install numpy
 
 ```
 
-> **補足**: `ultralytics` を入れることで、カメラ映像から即座にリアルタイム物体検知が可能になります。
+**補足**: `ultralytics` を入れることで、カメラ映像から即座にリアルタイム物体検知が可能になります。
+
+**起動時自動実行**: ロボットとして自律動作させる場合は、`systemd` を使って venv 内の python スクリプトを自動起動する設定を追加すると便利です。
+
+**電力不足注意**: Raspberry Pi 5は 5V/5A の電源を推奨します。AI処理中にカメラやサーボを動かすと電圧降下（低電圧警告）が発生しやすいため、高品質な電源を使用してください。
 
 ---
 
-## 運用アドバイス
+## KRSのコントロール
 
-1. **起動時自動実行**: ロボットとして自律動作させる場合は、`systemd` を使って venv 内の python スクリプトを自動起動する設定を追加すると便利です。
-2. **電力不足注意**: Raspberry Pi 5は 5V/5A の電源を推奨します。AI処理中にカメラやサーボを動かすと電圧降下（低電圧警告）が発生しやすいため、高品質な電源を使用してください。
+## IMU I2C取り込み
+
+## ADC PSD取り込み
+
+Raspberry Pi 5（ラズパイ5）で高性能な16bit ADC（アナログ-デジタルコンバータ）である**ADS1115**を使用する方法を解説します。
+
+ラズパイ5では、これまでのモデルと異なりGPIOの制御方式が変更されていますが、Pythonのライブラリ（Adafruit CircuitPython）を使用すれば、従来通り簡単に扱うことができます。
 
 ---
 
+## 1. 配線（接続方法）
 
-Raspberry Piをロボットとして運用する場合、電源を入れるだけでプログラムが動き出す**systemd**の設定は必須級のステップですね。
+ADS1115は**I2C**プロトコルを使用します。ラズパイ5のピン配置に合わせて以下のように接続してください。
 
-仮想環境（venv）を使用している場合、`ExecStart` に **venv内のPythonパス**を直接指定するのが最もスマートでトラブルの少ない方法です。
+| ADS1115 ピン | Raspberry Pi 5 ピン | 役割 |
+| :--- | :--- | :--- |
+| **VDD** | 3.3V (Pin 1) | 電源 (3.3V推奨) |
+| **GND** | GND (Pin 9) | グラウンド |
+| **SCL** | SCL (Pin 5) | I2C クロック |
+| **SDA** | SDA (Pin 3) | I2C データ |
+| **ADDR** | GNDへ接続 | I2Cアドレスを `0x48` に設定 |
+
+
+
+---
+
+## 2. ラズパイの設定
+
+まず、I2Cインターフェースを有効にする必要があります。
+
+1.  ターミナルで `sudo raspi-config` を実行。
+2.  **Interface Options** -> **I2C** を選択し、**Yes** を選んで有効化します。
+3.  再起動後、正しく認識されているか確認します。
+    ```bash
+    ls /dev/i2c*
+    ```
+    `/dev/i2c-1` が表示されればOKです。
+
+---
+
+## 3. ライブラリのインストール
+
+ラズパイ5では、Python環境の競合を避けるために**仮想環境（venv）**の使用が推奨されています。
+
+```bash
+# 仮想環境の作成と有効化
+python -m venv env
+source env/bin/activate
+
+# 必要なライブラリのインストール
+pip install adafruit-circuitpython-ads1x15
+```
+
+---
+
+## 4. Pythonコードの例
+
+以下のコードは、`A0`ピンに入力された電圧を読み取り、コンソールに表示するシンプルな例です。
+
+```python
+import time
+import board
+import busio
+import adafruit_ads1x15.ads1115 as ADS
+from adafruit_ads1x15.analog_in import AnalogIn
+
+# I2Cバスの初期化
+i2c = busio.I2C(board.SCL, board.SDA)
+
+# ADS1115オブジェクトの作成
+ads = ADS.ADS1115(i2c)
+
+# A0ピンをアナログ入力として設定
+chan = AnalogIn(ads, ADS.P0)
+
+print(f"{'電圧(V)':>10} {'数値':>10}")
+print("-" * 25)
+
+try:
+    while True:
+        # chan.value は 0-65535 の範囲 (16bit)
+        # chan.voltage は 実際の電圧
+        print(f"{chan.voltage:10.4f}V {chan.value:10}")
+        time.sleep(0.5)
+except KeyboardInterrupt:
+    print("\n終了します")
+```
+
+知っておくと役立つポイント
+**ゲイン（増幅率）の設定**:
+    デフォルトでは最大4.096Vまで測定可能です。これより小さい電圧を精密に測りたい場合は、`ads.gain = 2`（最大2.048V）のように設定変更できます。
+**差動入力**:
+    2つのピンの電圧差を測る場合は、`AnalogIn(ads, ADS.P0, ADS.P1)` のように指定します。
+**サンプリングレート**:
+    `ads.data_rate = 860` と設定することで、秒間最大860回の高速サンプリングが可能です。
+---
+
+Game controllerの接続
+
 
 ---
 
