@@ -122,7 +122,7 @@ pip install mujoco gymnasium stable-baselines3  # 強化学習セット
 pip install numpy
 
 ```
-* 補足: `ultralytics` を入れることで、カメラ映像から即座にリアルタイム物体検知が可能になります。
+* Yolo26: `ultralytics` を入れることで、OpenCVも導入されるので、カメラ映像から即座にリアルタイム物体検知や処理が可能になります。
 * 起動時自動実行: ロボットとして自律動作させる場合は、`systemd` を使って venv 内の python スクリプトを自動起動する設定を追加すると便利です。
 * 電力不足注意: Raspberry Pi 5は 5V/5A の電源を推奨します。AI処理中にカメラやサーボを動かすと電圧降下（低電圧警告）が発生しやすいため、高品質な電源を使用してください。
 
