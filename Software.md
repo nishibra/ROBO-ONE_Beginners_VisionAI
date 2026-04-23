@@ -75,9 +75,9 @@ Raspberry Pi 5では従来の `raspistill` ではなく `rpicam-apps` を使用�
 
 ### 基本コマンド
 
-* **プレビュー表示**: `rpicam-hello -t 0`
-* **カメラ一覧確認**: `rpicam-hello --list-cameras`
-* **静止画保存**: `rpicam-still -o test.jpg`
+* プレビュー表示: `rpicam-hello -t 0`
+* カメラ一覧確認: `rpicam-hello --list-cameras`
+* 静止画保存: `rpicam-still -o test.jpg`
 
 ### Pythonでの画像処理（重要）
 
