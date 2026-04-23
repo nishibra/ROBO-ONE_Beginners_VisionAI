@@ -210,10 +210,9 @@ except KeyboardInterrupt:
 RaspiOSに接続します。Raspi ConnectからRaspiに接続します。Bluetoothを探して接続します。いろいろなコントローラーが接続できると思います。
 ここでは8bitDo lite2に接続します。
 
-![gameController](pic_soft/cont.png)
+![gameController](pic_prog/cont.png)
 
-[購入先](https://www.amazon.co.jp/8Bitdo-Micro-Bluetooth%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%91%E3%83%83%E3%83%89%E3%83%9D%E3%82%B1%E3%83%83%E3%83%88%E3%82%B5%E3%82%A4%E3%82%BA%E3%83%9F%E3%83%8B%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9Switch%E3%80%81Android%E3%80%81Raspberry-Pi%E7%94%A8%E3%80%81%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%83%A2%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C-Blue/dp/B0CDG5HCCH/ref=sr_1_6?crid=PUQ4M4KS452Z&dib=eyJ2IjoiMSJ9.ncJN4q3g1OYHWP54YZQDXOxd49XkIHGRSLVb0O8_KgefI2N2VQPdvUGrGBejv7eTW4XuESefDAjEJdzGUITh2XqW59KLJuCdGW0gY6hG4OhSysUQ5p9ATLKbr805f-juPh6zBAzuJH4sJqJeVnFYmbMMc9E1FD0AeoVQvrKLVB1rDx9ehUS51ROzA8IFyEg-g-bPJT_IC2oNZnv38kJGgOHVJWC2u5TU3ShhUOOgLvTNsjiiAMJZnFS_0B9qumNUUAHjVA2t9NU1QpJWV4YdJ6zz-PSRmoJy_SVmrIhvgQM.ym91i2LktaXkTHvh4PtnuPYO7V2RG6DMMz72ychiI6Q&dib_tag=se&keywords=8bitdo&qid=1776910740&sprefix=8bit%2Caps%2C274&sr=8-6&ufe=app_do%3Aamzn1.fos.bf5b3200-08a5-4406-bf4b-e679e8ebbcc3&th=1)
-
+[購入先](https://www.amazon.co.jp/8BitDo-Lite-Switch%E3%80%81Switch-Lite%E3%80%81Android%E3%80%81Raspberry-Pi%EF%BC%88%E3%82%BF%E3%83%BC%E3%82%B3%E3%82%A4%E3%82%BA%EF%BC%89%E7%94%A8%E3%81%AEBluetooth%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%91%E3%83%83%E3%83%89/dp/B0B3DH1Z4P/ref=sr_1_3?crid=4B52DUKP1FMS&dib=eyJ2IjoiMSJ9.OMgXZbW6349e7O7MSB6-boH0speacDqBwPyCqMBf8kqQS91cf1NXrwDR8bop-pMxCByB9-rhUF1bvGedgOv1g39QDIIa9sYMVetsjntBhDSK_hW6-0XKEtY26uIXDCuMN7U81XNcx55nFOblcnEwi5SFKfV_DLcoVCtYKewDDWDrqrx7unY3d-oqm0cA6zPx-TH8vGpixUyHmJj9iwIB6sENaFylXbZrnDXNFGfPdcoLssHpvBl25dhW0HUno7fiID_TmOX3Ij7j7z7VuqhMDPu1Vrwp2taQFFCOaVFeJww.ziKejo1l-pDi-VHxZyEiwckld2h1psHbQk91X7XGRIQ&dib_tag=se&keywords=8bitdo%2Blite2&qid=1776910895&sprefix=8bitdo%2Blite%2Caps%2C277&sr=8-3&ufe=app_do%3Aamzn1.fos.bf5b3200-08a5-4406-bf4b-e679e8ebbcc3&th=1)
 
 ---
 
