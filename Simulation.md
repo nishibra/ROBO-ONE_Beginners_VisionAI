@@ -64,3 +64,20 @@ pip install numpy
 補足: ultralytics を入れることで、カメラ映像から即座にリアルタイム物体検知が可能になります。
 
 [venvについて](https://saas.n-works.link/programming/python/python_virtualenv_how_to_buildavirtualenvironment)
+
+## Mujoco Modelの作成
+
+|番号	|部品名	|重量	|個数 |合計
+| :--- | :--- | :--- | :--- |
+|1	|CPU case CPU	|170	|1	|170|
+|2	Wheel asy	15	2	30
+|3	アーム	        50	1	50
+|4	head	        26	1	26
+|5	stand	        12	1	12
+|6	Body/S/B.cover	80	1	80
+|7	krs3301	        28	4	112
+|8	バッテリー	90	1	90
+|	|合計		|    |     |	570
+
+
+
