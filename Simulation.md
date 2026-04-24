@@ -71,6 +71,10 @@ pip install numpy
 
 
 ## Mujocoについて
+
+
+[物理エンジンMuJoCoの紹介](https://qiita.com/Yayoi-Habami/items/1bf5a3e05b1516a90381)
+
 URDFとMujoco modelの違い
 * 1. 形状指定（size）の違い: URDFの <box size="0.1 0.1 0.5"/> は「全幅」ですが、MuJoCoの <geom size="0.05 0.05 0.25"/> は 中心からの距離（Half-extents） です。そのため、値を半分にする必要があります。
 
