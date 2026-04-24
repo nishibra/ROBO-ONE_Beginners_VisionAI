@@ -55,12 +55,15 @@ cd ~/robot_project
 python3 -m venv venv --system-site-packages
 
 ### 有効化（作業開始時に毎回実行）
+```
 source venv/bin/activate
 必要なライブラリのインストール
 pip install --upgrade pip
 pip install ultralytics  # YOLOv8 (物体認識)
 pip install mujoco gymnasium stable-baselines3  # 強化学習セット
 pip install numpy
+```
+
 補足: ultralytics を入れることで、カメラ映像から即座にリアルタイム物体検知が可能になります。
 
 [venvについて](https://saas.n-works.link/programming/python/python_virtualenv_how_to_buildavirtualenvironment)
