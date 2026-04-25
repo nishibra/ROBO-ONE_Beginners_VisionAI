@@ -16,16 +16,12 @@
 
 ## Yolo11 深層機械学習
 ---
-
-## Pythonのインストール
-Windows 11へのPythonインストールは、公式サイトのインストーラー（.exe）を使用するのが最適です。Python公式サイトの「Downloads」から最新版（3.13〜）をダウンロードし、インストール画面で必ず「Add Python.exe to PATH」にチェックを入れてインストールしてください。これにより、コマンドプロンプトやターミナルで python コマンドが使用可能になります。 
-
-### Pythonのインストール手順 (Windows 11)
-公式サイトからダウンロード: Python.orgにアクセスし、Windows用の最新版インストーラー（64-bit）をダウンロードします。
-インストール実行: ダウンロードしたファイルを実行します。
-Pathへの追加 (最重要): 最初の画面下部にある「Add Python.exe to PATH」のチェックボックスを必ずチェックします。
-インストール: 「Install Now」をクリックします。
-インストール完了: 完了画面が出たら「Close」を押します。 
+### Pythonのインストール手順 (Windows)
+* 公式サイトからダウンロード: Python.orgにアクセスし、Windows用の最新版インストーラー（64-bit）をダウンロードします。
+* インストール実行: ダウンロードしたファイルを実行します。
+* Pathへの追加 (最重要): 最初の画面下部にある「Add Python.exe to PATH」のチェックボックスを必ずチェックします。
+* インストール: 「Install Now」をクリックします。
+* インストール完了: 完了画面が出たら「Close」を押します。 
 
 ### インストールの確認
 Windowsターミナル（またはコマンドプロンプト/PowerShell）を開き、以下のコマンドを入力してバージョンが表示されれば成功です。 
@@ -44,21 +40,17 @@ python --version
 
 
 ## 開発環境（venv）の構築
-OS標準のPython環境を汚さないよう、仮想環境（venv）を使用します。Trixieでは pip install を直接行うとエラーになるため、この手順は必須です。
-
-仮想環境の作成と有効化
-sudo apt update && sudo apt upgrade -y
-mkdir ~/robot_project
-cd ~/robot_project
+OS標準のPython環境を汚さないよう、仮想環境（venv）を使用します。
 
 ### システムパッケージ（Picamera2など）を共有して作成
-python3 -m venv venv --system-site-packages
+python3 -m venv venv 
 
 ### 有効化（作業開始時に毎回実行）
 ```
-source venv/bin/activate
+.\venv\Scripts\activate
+
 必要なライブラリのインストール
-pip install --upgrade pip
+python.exe -m pip install --upgrade pip
 pip install ultralytics  # YOLOv8 (物体認識)
 pip install mujoco gymnasium stable-baselines3  # 強化学習セット
 pip install numpy
