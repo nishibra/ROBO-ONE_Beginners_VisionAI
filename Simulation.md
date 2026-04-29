@@ -179,7 +179,9 @@ Stable Baselines3（SB3）は、学習中の報酬（reward）やエピソード
 tensorboard kxr_balance_tb/PPO_1
 ```
 ※ `PPO_1` の親ディレクトリにいる場合は、上記コマンドでその中の全てのログを読み込みます。
-
+```bash
+pip install tensorboard
+```
 #### 2. ブラウザでの確認
 コマンドを実行すると、以下のようなメッセージが表示されます。
 `TensorBoard 2.x.x at http://localhost:6006/ (Press CTRL+C to quit)`
