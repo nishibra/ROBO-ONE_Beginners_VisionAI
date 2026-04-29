@@ -179,6 +179,9 @@ Stable Baselines3（SB3）は、学習中の報酬（reward）やエピソード
 tensorboard kxr_balance_tb/PPO_1
 ```
 ※ `PPO_1` の親ディレクトリにいる場合は、上記コマンドでその中の全てのログを読み込みます。
+
+ライブラリがインストールされているか確認
+TensorBoard自体がPython環境に入っているか確認し、入っていなければインストールします。
 ```bash
 pip install tensorboard
 ```
