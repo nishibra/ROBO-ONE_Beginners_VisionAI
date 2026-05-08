@@ -218,6 +218,8 @@ RaspiOSに接続します。Raspi ConnectからRaspiに接続します。Bluetoo
 
 [購入先](https://www.amazon.co.jp/8BitDo-Lite-Switch%E3%80%81Switch-Lite%E3%80%81Android%E3%80%81Raspberry-Pi%EF%BC%88%E3%82%BF%E3%83%BC%E3%82%B3%E3%82%A4%E3%82%BA%EF%BC%89%E7%94%A8%E3%81%AEBluetooth%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%91%E3%83%83%E3%83%89/dp/B0B3DH1Z4P/ref=sr_1_3?crid=4B52DUKP1FMS&dib=eyJ2IjoiMSJ9.OMgXZbW6349e7O7MSB6-boH0speacDqBwPyCqMBf8kqQS91cf1NXrwDR8bop-pMxCByB9-rhUF1bvGedgOv1g39QDIIa9sYMVetsjntBhDSK_hW6-0XKEtY26uIXDCuMN7U81XNcx55nFOblcnEwi5SFKfV_DLcoVCtYKewDDWDrqrx7unY3d-oqm0cA6zPx-TH8vGpixUyHmJj9iwIB6sENaFylXbZrnDXNFGfPdcoLssHpvBl25dhW0HUno7fiID_TmOX3Ij7j7z7VuqhMDPu1Vrwp2taQFFCOaVFeJww.ziKejo1l-pDi-VHxZyEiwckld2h1psHbQk91X7XGRIQ&dib_tag=se&keywords=8bitdo%2Blite2&qid=1776910895&sprefix=8bitdo%2Blite%2Caps%2C277&sr=8-3&ufe=app_do%3Aamzn1.fos.bf5b3200-08a5-4406-bf4b-e679e8ebbcc3&th=1)
 
+#### Game controllerのサンプルプログラム
+以下のプログラムは4軸のサーボモータをコントロールするprogramです。ここまでで出来れば操縦型で参加できます。
 ```python
 import pygame
 import time
@@ -292,10 +294,10 @@ if __name__ == "__main__":
     main()
 ```
 
-
 ---
 
 ## systemd による自動起動の設定手順
+大会では電源を入れれば自動起動で操縦可能にします。
 
 ### 1. サービスファイルの作成
 
@@ -350,10 +352,7 @@ sudo systemctl disable my_robot.service
 sudo systemctl start my_robot.service
 
 ```
-
----
-
-## 運用で役立つコマンド
+### 4. 運用で役立つコマンド
 
 自動起動を設定した後は、画面に何も表示されないため「本当に動いているか？」を確認する術を知っておく必要があります。
 
@@ -364,19 +363,16 @@ sudo systemctl start my_robot.service
 `journalctl -u my_robot.service -f`
 （Pythonの `print()` 内容をリアルタイムで監視できます。デバッグに最適です）
 * **停止・再起動**:
-`sudo systemctl stop my_robot.service` / `sudo systemctl restart my_robot.service`
-
----
+`sudo systemctl stop my_robot.service` / `sudo systemctl restart my_robot.service`---
 
 
 ---
 
-## 【補足版】Raspberry Pi Connect の導入・利用手順
+## 【補足】Raspberry Pi Connect の導入・利用手順
 
 Raspberry Pi Connectを使うと、ブラウザ越しにどこからでもRaspberry Piのデスクトップにアクセスできます。セットアップを以下のステップに分けて解説します。
 
 ### 1. 準備：OSのインストール
-
 
 Raspberry Pi Connectを利用するには、OSのバージョンと種類が重要です。
 
