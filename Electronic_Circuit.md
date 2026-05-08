@@ -24,7 +24,7 @@ Raspi5とカメラを使用し画像処理や深層強化学習などフィジ�
 ### Hat
 はんだ付けの極力避けるため以下のHatを使用します。Serial servo controlや電源、Fanが搭載されており、コンパクトで搭載性が非常に良いものです。
 
-#### BTE100B
+#### (BTE100B)(準備中)
 ![hat](pics_elec/hat.png)
 
 [HAT購入先](https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT)
@@ -65,13 +65,13 @@ Raspiカメラには以下のものがあります。レンズはFOV違いでい
 [8メガピクセル1080Pミニカメラモジュール160°広角 購入先](https://www.amazon.co.jp/dp/B0D2BMH1BB?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
 #### Flexible cable
-フラットケーブルは15cmの長さのものを使用します。
+フラットケーブルは10～15cmの長さのものを使用します。
 
 [CSIケーブル 15-22pin FPC フレキシブル 100mm購入先](https://www.amazon.co.jp/dp/B0DNFP5QJR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
 ### 入出力
 #### IMU bno055
-I2CにQWICコネクターで接続します。
+I2CにQWICコネクターで接続します。ROBO-ONE Beginners autoと同様に接続してください。
 
 ![bno055](pics_elec/bno055.png)
 
