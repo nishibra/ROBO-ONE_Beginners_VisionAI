@@ -1,0 +1,90 @@
+<mujoco model="beginners_car">
+    <compiler angle="radian" autolimits="true"/>
+    <option gravity="0 0 -9.81" timestep="0.001"/>
+    <!-- ボディの定義 -->
+    <asset>
+        <mesh name="body_mesh" file="assets/body.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="wheel_mesh" file="assets/wheels.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="cpubox_mesh" file="assets/cpucase.stl" scale="0.001 0.001 0.001"/>
+        <material name="body_mat" rgba="0.2 0.5 0.8 0.5"/>
+        <material name="wheel_mat" rgba="0.1 0.1 0.8 1"/>
+        <material name="arm_mat" rgba="0.8 0.1 0.1 1"/>
+    </asset>
+ 
+    <default>
+        <joint damping="0.01" armature="0.01" frictionloss="0.01"/>
+    </default>
+
+    <worldbody>
+        <geom name="floor" type="plane" size="2.5 2.5 0.1" rgba="0.8 0.8 0.8 1"/>
+        <light pos="0 0 3" dir="0 0 -1"/>
+
+        <body name="base_link" pos="0 0 0.05">
+            <!camera name="tracking_cam" pos="0.03 0 0.18" euler="0 -1.57 1.57" fovy="100"/>
+            
+            <freejoint name="root" /> 
+            <geom type="mesh" mesh="body_mesh" euler="0 0 1.57" material="body_mat" mass="0.4"/>
+                                
+            <body name="cpubox" pos="0.0 0.0 0.05">
+                <geom name="cpubox_geom" type="mesh" mesh="cpubox_mesh" 
+                  euler="0 0 1.57" material="body_mat" mass="0.04" contype="1" conaffinity="1"/>
+            </body>
+ 
+            <body name="right_wheel" pos="0.006 -0.055 0.015">
+                <joint name="drive_right" type="hinge" axis="0 1 0"/>
+                <geom name="right_wheel_geom" type="mesh" mesh="wheel_mesh" 
+                euler="1.57 0 0" material="wheel_mat" mass="0.01" 
+                friction="0.5 0.5 0.05"
+                contype="1" conaffinity="1"/>
+            </body>
+
+            <body name="left_wheel" pos="0.006 0.055 0.015">
+                <joint name="drive_left" type="hinge" axis="0 1 0"/>
+                <geom name="left_wheel_geom" type="mesh" mesh="wheel_mesh"  
+                    euler="-1.57 0 0" material="wheel_mat" mass="0.01"
+                    friction="0.5 0.5 0.05"
+                    contype="1" conaffinity="1"/>
+            </body>
+
+            <body name="arm_roll" pos="0.0 0.0 0.115">
+                <joint name="drive_roll" type="hinge" axis="0 0 1"
+                      damping="0.1" 
+                      armature="0.01" 
+                      limited="true" 
+                      range="-3.14 3.14"/>
+                <geom name="arm_roll_geom" type="cylinder" size="0.01 0.04" 
+                  euler="0 3.14 0" material="wheel_mat" mass="0.03"/>
+             
+                <body name="arm_pitch" pos="0.015 0.0 0.0">
+                    <joint name="drive_pitch" type="hinge" axis="0 1 0"
+                      damping="0.1" 
+                      armature="0.01" 
+                      limited="true" 
+                      range="-3.14 3.14"/>
+                    <geom name="arm_pitch_geom" type="capsule" size="0.0075 0.0425" 
+                      pos=" 0.0475 0.00 0.0" euler="0 1.57 0" material="arm_mat" mass="0.01"/>
+                </body>
+            </body>
+        </body> 
+    </worldbody>
+
+    <!actuator>
+        <!velocity name="right_motor" joint="drive_right" kv="300" forcerange="-1.36 1.36"/>
+        <!velocity name="left_motor"  joint="drive_left"  kv="300" forcerange="-1.36 1.36"/>
+        <!position name="roll_motor"  joint="drive_roll"  kp="300" forcerange="-1.36 1.36" 
+          ctrlrange="-3.14 1.57"/>
+        <!position name="pitch_motor" joint="drive_pitch" kp="300" forcerange="-1.36 1.36" 
+          ctrlrange="-1.57 1.00"/>
+    <!/actuator>
+
+    <actuator>
+        <velocity name="right_motor" joint="drive_right" kv="0.143" forcerange="-1.36 1.36" ctrlrange="-14.5 14.5"/>
+        <velocity name="left_motor" joint="drive_left" kv="0.143" forcerange="-1.36 1.36" ctrlrange="-14.5 14.5"/>
+        <position name="roll_motor" joint="drive_roll" kp="27" forcerange="-1.36 1.36" ctrlrange="-3.14 1.57"/>
+        <position name="pitch_motor" joint="drive_pitch" kp="27" forcerange="-1.36 1.36" ctrlrange="-1.5 0.8"/>
+    </actuator>
+
+
+
+</mujoco>
+

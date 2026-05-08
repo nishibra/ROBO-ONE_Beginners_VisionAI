@@ -1,0 +1,115 @@
+<mujoco model="beginners_car">
+    <compiler angle="radian" autolimits="true"/>
+    <option gravity="0 0 -9.81" timestep="0.001"/>
+
+    <asset>
+        <mesh name="body_mesh" file="assets/body.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="wheel_mesh" file="assets/wheels.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="caster_mesh" file="assets/caster.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="cpubox_mesh" file="assets/cpubox.stl" scale="0.001 0.001 0.001"/>
+        <material name="body_mat" rgba="0.2 0.5 0.8 0.5"/>
+        <material name="wheel_mat" rgba="0.1 0.1 0.8 1"/>
+        <material name="dou_mat" rgba="0.8 0.1 0.1 1"/>
+        <material name="arm_mat" rgba="0.0 0.6 0.1 1"/>
+    </asset>
+    
+    <sensor>
+        <!-- ジャイロセンサー: 角速度 (rad/s) -->
+        <gyro name="imu_gyro" site="imu_site"/>
+        <!-- 加速度センサー: 線加速度 (m/s^2) -->
+        <accelerometer name="imu_accel" site="imu_site"/>
+    </sensor>
+    
+    <default>
+        <joint damping="0.001" armature="0.01" frictionloss="0.001"/>
+    </default>
+
+    <worldbody>
+        <geom name="floor" type="plane" size="2.5 2.5 0.1" rgba="0.8 0.8 0.8 1"/>
+        <light pos="0 0 3" dir="0 0 -1"/>
+
+        <body name="base_link" pos="0 0 0.05">
+            <camera name="tracking_cam" pos="0.02 0 0.18" euler="0 -1.57 1.57" fovy="100"/>
+            <site name="imu_site" pos="0 0 0.05" size="0.01" rgba="0 1 0 1"/>
+            <freejoint name="root" /> 
+            <geom type="mesh" mesh="body_mesh" euler="0 0 -4.71" material="body_mat" mass="0.1"/>
+                <body name="nose" pos="0.04 0 0.03">
+                    <site name="nose" pos="0 0 0" size="0.01" rgba="1 0 0 1"/>
+                </body>
+            <body name="caster" pos="0.0 0.0 -0.001">
+                <geom name="caster_geom" type="mesh" mesh="caster_mesh" euler="3.14 0 1.57" material="body_mat" mass="0.01" contype="1" conaffinity="1"/>
+            </body>
+            
+            <body name="fcaster" pos="-0.035 0 -0.004"> 
+                <geom name="fcaster_geom" type="sphere" size="0.005" friction="0 0 0"/>
+            </body>
+            
+            <body name="rcaster" pos="0.035 0 -0.004">
+                <geom name="rcaster_geom" type="sphere" size="0.005" friction="0 0 0"/>
+            </body>
+            
+            <body name="cpubox" pos="0.0 0.0 0.05">
+                <geom name="cpubox_geom" type="mesh" mesh="cpubox_mesh" euler="0 0 1.57" material="body_mat" mass="0.35" contype="1" conaffinity="1"/>
+            </body>
+ 
+            <body name="right_wheel" pos="0.0 -0.055 0.02">
+                <joint name="drive_right" type="hinge" axis="0 1 0"/>
+                <geom name="right_wheel_geom" type="mesh" mesh="wheel_mesh" 
+                euler="1.57 0 0" material="wheel_mat" mass="0.01" friction="0.5 0.5 0.5"
+                contype="1" conaffinity="1"/>
+            </body>
+
+            <body name="left_wheel" pos="0.0 0.055 0.02">
+                <joint name="drive_left" type="hinge" axis="0 1 0"/>
+                <geom name="left_wheel_geom" type="mesh" mesh="wheel_mesh"  
+                    euler="-1.57 0 0" material="wheel_mat" mass="0.01" friction="0.5 0.5 0.5"
+                    contype="1" conaffinity="1"/>
+            </body>
+
+            <body name="arm_roll" pos="0.0 0.0 0.12">
+                <joint name="drive_roll" type="hinge" axis="0 0 1"
+                      damping="0.07" 
+                      armature="0.005" 
+                      limited="true"
+                      range="-6.14 6.14"/>
+                <geom name="arm_roll_geom" type="cylinder" size="0.015 0.06" euler="0 3.14 0" material="wheel_mat" mass="0.03"/>
+             
+                <body name="arm_pitch" pos="0.03 0.0 0.0">
+                    <joint name="drive_pitch" type="hinge" axis="0 1 0"
+                      damping="0.07" 
+                      armature="0.005" 
+                      limited="true" 
+                      range="-3.14 3.14"/>
+                    <geom name="arm_pitch_geom" type="capsule" 
+                      size="0.012 0.06" pos=" 0.06 0.00 0.0" 
+                      euler="0 1.57 0" material="arm_mat" 
+                      mass="0.01" />
+                    <body name="hand" pos="0.12 0 0">
+                        <site name="tip" pos="0 0 0" size="0.01" rgba="1 0 0 1"/>
+                    </body>
+
+                </body>
+            </body>
+        </body>
+        
+        <body name="target" mocap="true" pos="0.5 0 0.125">
+            <geom type="capsule" size="0.012 0.035 " rgba="1 0 0 1" 
+                contype="0" conaffinity="0"/>
+        </body>
+           
+    </worldbody>
+    <! --KRS3301-->
+    <actuator>
+        <velocity name="right_motor" joint="drive_right" kv="0.078" forcerange="-0.59 0.59" ctrlrange="-7.48 7.48"/>
+        <velocity name="left_motor" joint="drive_left" kv="0.078" forcerange="-0.59 0.59" ctrlrange="-7.48 7.48"/>
+        <position name="roll_motor" joint="drive_roll" kp="11" forcerange="-0.59 0.59" ctrlrange="-3.14 1.57"/>
+        <position name="pitch_motor" joint="drive_pitch" kp="11" forcerange="-0.59 0.59" ctrlrange="-1.5 0.8"/>
+    </actuator>
+    <! --KRS3304R2 -->
+    <! actuator>
+        <! velocity name="right_motor" joint="drive_right" kv="0.143" forcerange="-1.36 1.36"/>
+        <! velocity name="left_motor" joint="drive_left" kv="0.143" forcerange="-1.36 1.36"/>
+        <! position name="roll_motor" joint="drive_roll" kp="27" forcerange="-1.36 1.36" ctrlrange="-3.14 1.57"/>
+        <! position name="pitch_motor" joint="drive_pitch" kp="27" forcerange="-1.36 1.36" ctrlrange="-1.5 0.8"/>
+    <! /actuator>
+</mujoco>
