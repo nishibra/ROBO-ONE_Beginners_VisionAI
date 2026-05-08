@@ -68,25 +68,6 @@ i2cdetect -y 1
 ls /dev/ttyAMA0
 
 ```
----
-## カメラ（rpicam-apps / Picamera2）の使い方
-Raspberry Pi 5では従来の `raspistill` ではなく `rpicam-apps` を使用します。
-
-### 基本コマンド
-* プレビュー表示: `rpicam-hello -t 0`
-* カメラ一覧確認: `rpicam-hello --list-cameras`
-* 静止画保存: `rpicam-still -o test.jpg`
-
-### Pythonでの画像処理
-OpenCVとPicamera2を組み合わせる際、色の並び（色空間）に注意が必要です。
-* 色の変換: Picamera2は RGB形式で画像を取得しますが、OpenCV（cv2）はBGR形式として処理します。
-```python
-# 変換例
-import cv2
-img_bgr = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2BGR)
-```
-* フォーマット: メモリ効率を上げるため、`format='RGB888'` を指定してキャプチャすることを推奨します。
----
 
 ## 開発環境（venv）の構築
 
@@ -118,6 +99,29 @@ pip install numpy
 * Yolo26: `ultralytics` を入れることで、OpenCVも導入されるので、カメラ映像から即座にリアルタイム物体検知や処理が可能になります。
 * 起動時自動実行: ロボットとして自律動作させる場合は、`systemd` を使って venv 内の python スクリプトを自動起動する設定を追加すると便利です。
 * 電力不足注意: Raspberry Pi 5は 5V/5A の電源を推奨します。AI処理中にカメラやサーボを動かすと電圧降下（低電圧警告）が発生しやすいため、高品質な電源を使用してください。
+
+---
+## カメラ（rpicam-apps / Picamera2）の使い方
+Raspberry Pi 5では従来の `raspistill` ではなく `rpicam-apps` を使用します。
+
+### 基本コマンド
+* プレビュー表示: `rpicam-hello -t 0`
+* カメラ一覧確認: `rpicam-hello --list-cameras`
+* 静止画保存: `rpicam-still -o test.jpg`
+
+### Pythonでの画像処理
+OpenCVとPicamera2を組み合わせる際、色の並び（色空間）に注意が必要です。
+* 色の変換: Picamera2は RGB形式で画像を取得しますが、OpenCV（cv2）はBGR形式として処理します。
+```python
+# 変換例
+import cv2
+img_bgr = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2BGR)
+```
+* フォーマット: メモリ効率を上げるため、`format='RGB888'` を指定してキャプチャすることを推奨します。
+---
+## yolo26の使用方法
+
+https://docs.ultralytics.com/ja/models/yolo26/
 
 ---
 
@@ -426,151 +430,6 @@ sudo apt install rpi-connect
 
 
 ---
-
-### 「ボタンを押した瞬間に、別のPythonスクリプトやシステムコマンド（プログラム）を起動したい」
-
-Python標準ライブラリの `subprocess` を組み合わせるのが一般的です。
-
-### 1. 別のPythonスクリプトを起動する場合
-例えば、ボタンを押すと `web_server.py` という別のプログラムをバックグラウンドで起動する例です。
-
-```python
-from gpiozero import Button
-from signal import pause
-import subprocess
-
-def start_program():
-    print("プログラムを起動します...")
-    # 別のPythonスクリプトを非同期で実行
-    subprocess.Popen(["python3", "web_server.py"])
-
-button = Button(13)
-
-# 割り込みで関数を呼び出す
-button.when_pressed = start_program
-
-pause()
-```
-
----
-
-### 2. シェルコマンドやアプリを起動する場合
-システムコマンド（例えば、カメラの録画開始や音楽再生など）を動かす場合も同様です。
-
-```python
-import subprocess
-from gpiozero import Button
-
-def run_command():
-    # 例：システムをシャットダウンする、または特定のアプリを開く
-    # subprocess.run(["ls", "-l"]) # テスト用にファイル一覧を表示
-    subprocess.Popen(["vlc", "music.mp3"]) # 音楽プレーヤーを起動
-
-button = Button(13)
-button.when_pressed = run_command
-```
-
----
-
-### 重要なポイント：`run` と `Popen` の違い
-プログラムを「起動」させる際、用途によって使い分ける必要があります。
-
-* **`subprocess.run()`**: そのプログラムが**終わるまで、メインのPythonスクリプトが止まります**（同期処理）。
-* **`subprocess.Popen()`**: そのプログラムを**裏で起動し、メインのスクリプトはすぐに次の処理へ進みます**（非同期処理）。「ボタンを押してアプリを立ち上げる」なら、こちらがスムーズです。
-
----
-
-### 注意点：多重起動の防止
-今のコードだと、ボタンを連打するとプログラムが何個も立ち上がってしまい、ラズパイのメモリを圧迫する可能性があります。
-
-もし「既に起動していたら何もしない」という風にしたい場合は、以下のようにフラグ管理をするのがスマートです。
-
-```python
-process = None
-
-def start_program():
-    global process
-    # プロセスがまだ動いていない（または終了している）かチェック
-    if process is None or process.poll() is not None:
-        print("新規起動します")
-        process = subprocess.Popen(["python3", "target_script.py"])
-    else:
-        print("既に実行中です")
-```
-`systemd` はバックグラウンド（画面なし）で動くのが得意ですが、**OpenCVの `cv2.imshow` でプレビュー画面を出したい**場合や、デスクトップが立ち上がってからGUIアプリとして起動したい場合は、**Wayland/Wayfire の Autostart** 方式を使います。
-
-Raspberry Pi 5（Raspberry Pi OS 64-bit）はデフォルトの表示サーバーが **Wayland** になっているため、従来の `~/.config/lxsession/...` 方式ではなく、以下の手順で行うのが最も確実です。
-
----
-
-## 1. 自動起動用ディレクトリの作成
-まず、自動起動設定ファイルを置くためのディレクトリを作成します（既にある場合は飛ばしてOKです）。
-
-```bash
-mkdir -p ~/.config/autostart
-```
-
-## 2. デスクトップエントリーファイルの作成
-次に、起動したいプログラムの情報を記した `.desktop` ファイルを作成します。
-
-```bash
-nano ~/.config/autostart/robot_gui.desktop
-```
-
-中身を以下のように記述してください。
-
-```ini
-[Desktop Entry]
-Type=Application
-Name=Robot Vision AI
-# 仮想環境のpythonパス + 実行するスクリプトのフルパス
-Exec=/home/pi/begin/venv/bin/python3 /home/pi/begin/main.py
-# 起動時のカレントディレクトリ
-Path=/home/pi/begin
-# ターミナルを表示させたい場合は true
-Terminal=false
-# 自動起動を有効にする
-X-GNOME-Autostart-enabled=true
-```
-
-## 3. 実行権限の付与
-作成したファイルに実行権限を与えます。
-
-```bash
-chmod +x ~/.config/autostart/robot_gui.desktop
-```
-
-これで、次回再起動した際に**デスクトップ画面が表示された直後**にプログラムが動き出します。
-
----
-
-## 注意点とデバッグのコツ
-
-### ① パスは必ず「フルパス」で
-`python3` や `main.py` とだけ書くと、システムが場所を見つけられず起動に失敗します。必ず `/home/pi/...` から始まるフルパスで記述してください。
-
-### ② ネットワーク待ち（重要）
-もしプログラム内で「ネットからAIモデルをダウンロードする」や「特定のIPに通信する」処理がある場合、デスクトップ起動直後はまだWi-Fiがつながっていないことがあります。その場合は、Pythonコードの冒頭に数秒の待機を入れるのが簡単で確実です。
-
-```python
-import time
-time.sleep(10)  # 起動後10秒待ってからメイン処理を開始
-```
-
-### ③ ログの確認方法
-Autostart方式は `systemctl status` のような便利な確認コマンドがありません。エラーで動かない場合は、以下のように記述してログをファイルに書き出すようにすると原因が特定しやすくなります。
-
-```ini
-# Execの行を以下のように書き換えてログを保存
-Exec=/bin/bash -c '/home/pi/begin/venv/bin/python3 /home/pi/begin/main.py > /home/pi/robot_debug.log 2>&1'
-```
-
----
-
-**次は、この自動起動を「特定のスイッチを押したときだけ解除する」ような、現場で役立つ運用テクニックについて解説しましょうか？**
-
----
-
 ### PCのsimulation dataの移植
 高精度な9軸センサーである**BNO055**は、内部で姿勢計算（クォータニオン出力）を行ってくれるため、実機展開には非常に適したセンサーです。
 
@@ -578,7 +437,7 @@ Exec=/bin/bash -c '/home/pi/begin/venv/bin/python3 /home/pi/begin/main.py > /hom
 
 ---
 
-### 1. 物理的なセットアップ（ハードウェア）
+##1. 物理的なセットアップ（ハードウェア）
 
 BNO055は一般的にI2Cで通信します。Raspberry PiやArduino等と接続します。
 
@@ -597,117 +456,4 @@ Adafruitのライブラリを使用するのが最も簡単です。
 pip install adafruit-circuitpython-bno055
 ```
 
----
 
-### 3. 実機用推論サンプルスクリプト
-
-このスクリプトは、シミュレーション（MuJoCo）での観測値の並び順に合わせて、実機のセンサーデータを整形してAI（PPO）に入力する流れを示しています。
-
-```python
-import time
-import board
-import busio
-import adafruit_bno055
-import numpy as np
-from stable_baselines3 import PPO
-
-# --- 1. センサーと通信の初期化 ---
-i2c = busio.I2C(board.SCL, board.SDA)
-sensor = adafruit_bno055.BNO055_I2C(i2c)
-
-# --- 2. モデルのロード ---
-# 学習済みの「起き上がり・バトル用モデル」を指定
-model = PPO.load("ppo_robot_opencv_v2.zip")
-
-def get_real_obs():
-    """実機からMuJoCoの観測形式(25次元など)を作成する"""
-    
-    # A. 自己状態（qpos/qvel相当）の取得
-    # 実機では関節角度(エンコーダ)やジャイロから取得
-    # ここでは例としてダミーまたは現在のサーボ角度を使用
-    joint_angles = [0.0] * 7  # qpos[0:7]相当
-    joint_velocities = [0.0] * 6  # qvel[0:6]相当
-    
-    # B. 直立判定（upright）の取得
-    # BNO055のクォータニオンから上向きベクトル(Z軸成分)を計算
-    quat = sensor.quaternion  # (w, x, y, z)
-    # 簡易的には、重力ベクトルのZ成分を使用
-    # 直立時に 1.0, 転倒時に 0.0 になるようスケーリング
-    gravity = sensor.gravity # (x, y, z)
-    upright = gravity[2] / 9.8 
-
-    # C. OpenCV特徴量（cx, cy, area）の取得
-    # 実機カメラ(Webcam/PiCam)で赤色抽出を行う関数（前述のOpenCV処理）
-    # cv_features = get_real_camera_features() 
-    cv_features = [0.0, 0.0, 0.0] # ターゲットが見えない場合は0
-
-    # 学習時の観測ベクトル（25次元）に結合
-    # [qpos(7), qvel(14), upright(1), cv(3)] のような並び順を維持
-    obs = np.concatenate([
-        joint_angles, 
-        joint_velocities, 
-        [upright], 
-        cv_features
-    ]).astype(np.float32)
-    
-    return obs
-
-def apply_action(action):
-    """AIの出力を実機のサーボ命令に変換"""
-    # 不感帯補正 (学習時と同じロジック)
-    a_s = np.sign(action) * (0.25 + 0.75 * np.abs(action))
-    
-    # サーボ角度への変換（スケーリング）
-    # 例: action=1.0 -> 1500μs, action=-1.0 -> 500μs など
-    target_pwms = [
-        int(1500 + a_s[0] * 500), # 右タイヤ
-        int(1500 + a_s[1] * 500), # 左タイヤ
-        # アーム類も同様に変換
-    ]
-    # hw.send_pwm(target_pwms) # 実機へ送信
-
-# --- メインループ ---
-print("BNO055キャリブレーション待ち...")
-while not sensor.calibrated:
-    pass
-
-print("推論ループ開始")
-while True:
-    start_t = time.time()
-    
-    # 状態取得
-    obs = get_real_obs()
-    
-    # 推論 (決定論的 = deterministic=True)
-    action, _ = model.predict(obs, deterministic=True)
-    
-    # モーター駆動
-    apply_action(action)
-    
-    # 制御周期の同期 (シミュレーションに合わせる: 例 50Hz)
-    elapsed = time.time() - start_t
-    time.sleep(max(0, 0.02 - elapsed))
-```
-
----
-
-### 4. 実機展開を成功させるコツ
-
-1.  **キャリブレーション**:
-    BNO055は電源投入直後は精度が低いです。ロボットを「8の字」に動かすなどして、`sensor.calibrated` が True になるのを確認してから推論を開始してください。
-    
-
-2.  **座標系の変換 (重要)**:
-    MuJoCoの座標系は **右手系 (Zが上)** です。BNO055が返す重力ベクトルや方位の軸が、MuJoCoのシミュレーション空間と矛盾していないか、事前に値を表示して確認してください（逆方向に傾くとAIがパニックになります）。
-
-3.  **ノイズ対策**:
-    実機のBNO055は振動に敏感です。モーターが回るとデータが跳ねるため、`sensor.gravity`（重力補正済み加速度）を使用するか、単純な移動平均フィルタを通してAIに渡すと安定します。
-    
-
-4.  **不感帯の再設定**:
-    実物の床の摩擦は MuJoCo と異なります。実機が「震えるだけで動かない」場合は、`DEADZONE` の値を `0.25` から少しずつ上げ下げして、動き出しがスムーズなポイントを探してください。
-
-まずは **「BNO055の傾き値（Z成分）を表示させて、ロボットを倒すと0に近づき、立てると1に近づくか」** を確認することから始めるのが確実です。
-
-### yolo26
-https://docs.ultralytics.com/ja/models/yolo26/
