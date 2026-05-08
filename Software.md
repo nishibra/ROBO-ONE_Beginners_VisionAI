@@ -218,7 +218,79 @@ RaspiOSに接続します。Raspi ConnectからRaspiに接続します。Bluetoo
 
 [購入先](https://www.amazon.co.jp/8BitDo-Lite-Switch%E3%80%81Switch-Lite%E3%80%81Android%E3%80%81Raspberry-Pi%EF%BC%88%E3%82%BF%E3%83%BC%E3%82%B3%E3%82%A4%E3%82%BA%EF%BC%89%E7%94%A8%E3%81%AEBluetooth%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%91%E3%83%83%E3%83%89/dp/B0B3DH1Z4P/ref=sr_1_3?crid=4B52DUKP1FMS&dib=eyJ2IjoiMSJ9.OMgXZbW6349e7O7MSB6-boH0speacDqBwPyCqMBf8kqQS91cf1NXrwDR8bop-pMxCByB9-rhUF1bvGedgOv1g39QDIIa9sYMVetsjntBhDSK_hW6-0XKEtY26uIXDCuMN7U81XNcx55nFOblcnEwi5SFKfV_DLcoVCtYKewDDWDrqrx7unY3d-oqm0cA6zPx-TH8vGpixUyHmJj9iwIB6sENaFylXbZrnDXNFGfPdcoLssHpvBl25dhW0HUno7fiID_TmOX3Ij7j7z7VuqhMDPu1Vrwp2taQFFCOaVFeJww.ziKejo1l-pDi-VHxZyEiwckld2h1psHbQk91X7XGRIQ&dib_tag=se&keywords=8bitdo%2Blite2&qid=1776910895&sprefix=8bitdo%2Blite%2Caps%2C277&sr=8-3&ufe=app_do%3Aamzn1.fos.bf5b3200-08a5-4406-bf4b-e679e8ebbcc3&th=1)
 
-
+```python
+import pygame
+import time
+import serial
+from krs_driver_rp5 import * 
+#servo id
+id_r=1
+id_l=2
+id_pan=3
+id_tilt=4
+#
+ct=7500
+ct_pan=6128
+ct_tilt=7500
+#
+krs=KRSdriver()
+#
+def arm(pan,tilt):
+    krs.set_position_ret(id_pan,ct_pan+pan)
+    krs.set_position_ret(id_tilt,ct_tilt-tilt)
+#
+def drive(r_sp,l_sp):
+    krs.set_position_ret(2,ct-l_sp)
+    krs.set_position_ret(1,ct+r_sp)
+#
+def free_all():
+    krs.read_position_set_free(1)
+    krs.read_position_set_free(2)
+    krs.read_position_set_free(3)
+    krs.read_position_set_free(4)  
+#
+def main():
+	# Pygameの初期化（コントローラー用）
+    pygame.init()
+    pygame.joystick.init()
+    while pygame.joystick.get_count() == 0:
+        pygame.event.pump() # イベントキューを更新
+        time.sleep(0.1)     # CPU負荷を抑えるための待機
+    joystick = pygame.joystick.Joystick(0)
+    joystick.init()
+    print(f"Using: {joystick.get_name()}")
+    #
+    try:
+        while(True) :
+            pygame.event.pump()
+            bu=joystick.get_button(0) # A
+            bu2=joystick.get_button(1)# B
+            bu3=joystick.get_button(3)# Y
+            bu4=joystick.get_button(4)# Y
+            bu6=joystick.get_button(6)# L1
+            bu8=joystick.get_button(8)# L1
+            if bu!=0: 
+                drive(0,0)
+            elif bu2!=0:
+                free_all()
+            elif bu6!=0:
+                arm(int(5000*joystick.get_axis(2)),2800)
+            elif bu8!=0:
+                arm(int(5000*joystick.get_axis(2)),-3800)                
+            else:
+                fr=int(-300*joystick.get_axis(1))
+                rf=int(100*joystick.get_axis(0))
+                arm(int(5000*joystick.get_axis(2)),int(-5000*joystick.get_axis(3)))
+                drive(fr-rf,fr+rf)
+            time.sleep(0.01)
+    except KeyboardInterrupt:
+        print("\n終了します")
+        pygame.quit()
+        free_all()
+#
+if __name__ == "__main__":
+    main()
+```
 
 
 ---
