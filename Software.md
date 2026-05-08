@@ -119,7 +119,9 @@ img_bgr = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2BGR)
 ```
 * フォーマット: メモリ効率を上げるため、`format='RGB888'` を指定してキャプチャすることを推奨します。
 ---
-## yolo26の使用方法
+## YOLO11の使用方法
+
+YOLOはどんどん進化しており、簡単にインストールでき、使用できる便利な物体認識の深層学習手法です。また最近エッジおよび低電力デバイス向けに設計されたYOLO26も使えます。
 
 https://docs.ultralytics.com/ja/models/yolo26/
 
