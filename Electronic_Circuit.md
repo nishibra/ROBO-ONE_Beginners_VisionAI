@@ -24,7 +24,7 @@ Raspi5とカメラを使用し画像処理や深層強化学習などフィジ�
 ### Hat
 はんだ付けの極力避けるため以下のHatを使用します。Serial servo controlや電源、Fanが搭載されており、コンパクトで搭載性が非常に良いものです。
 
-#### (BTE100B)(準備中)
+#### (BTE100B)(仕様変更中)
 ![hat](pics_elec/hat.png)
 
 [HAT購入先](https://www.besttechnology.co.jp/modules/knowledge/?BTE100B%20DXHAT)
@@ -141,7 +141,7 @@ temp=50000は50℃で冷却ファンをONする意味で、摂氏度の1000倍�
 設定温度を10℃下回るとファンはOFFする
 ```
 
-### config.txtに追記する情報
+### BTE100Bのconfig.txtに追記する情報
 
 ```
 [pi5]
