@@ -125,6 +125,14 @@ YOLOはどんどん進化しており、簡単にインストールでき、使�
 
 https://docs.ultralytics.com/ja/models/yolo26/
 
+pi-cameraのsample programを以下に置きました。
+
+example/etc/picamcam.py
+
+以下はYolo11の物体認識のプログラムです。
+
+example/etc/inf11_cam.py
+
 ---
 
 ## KRSのコントロール
@@ -226,6 +234,8 @@ RaspiOSに接続します。Raspi ConnectからRaspiに接続します。Bluetoo
 
 #### Game controllerのサンプルプログラム
 以下のプログラムは4軸のサーボモータをコントロールするprogramです。ここまでで出来れば操縦型で参加できます。
+
+example/etc/joy.py
 ```python
 import pygame
 import time
@@ -406,7 +416,6 @@ sudo apt update
 sudo apt install rpi-connect
 
 ```
-
 
 2. **機能を有効化:**
 メニューの「設定」→「Raspberry Pi Configuration」→「Interfaces」タブの中に「Raspberry Pi Connect」という項目があれば **ON** にします。
