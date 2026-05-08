@@ -62,7 +62,7 @@ Raspiカメラには以下のものがあります。レンズはFOV違いでい
 
 [Raspberry Pi 5 カメラ 5MP 1080P 130°](https://ja.aliexpress.com/item/1005006790000090.html?pvid=09bf0cac-d03c-4739-89cf-66528290c2b3&pdp_ext_f=%7B%22ship_from%22%3A%22CN%22%2C%22sku_id%22%3A%2212000038354130022%22%7D&scm=1007.25281.487460.0&scm-url=1007.25281.487460.0&scm_id=1007.25281.487460.0&pdp_npi=6%40dis%21JPY%21%EF%BF%A5+781%21%EF%BF%A5+248%21%21%2132.86%2110.43%21%40213ba0c517767581979563570e81e7%2112000038354130022%21gdf%21JP%213303977755%21X%211%210%21n_tag%3A-29919%3Bd%3Aca1dc3a9%3Bm03_new_user%3A-29895%3BpisId%3A5000000204357513&mainPicRatio=1&spm=a2g0o.tm1000062330.3974233040.d80&aecmd=true)
 
-[8メガピクセル1080Pミニカメラモジュール160°広角 購入先](https://www.amazon.co.jp/dp/B0D2BMH1BB?ref=ppx_yo2ov_dt_b_fed_asin_title)
+[1080Pミニカメラモジュール160°広角 購入先](https://www.amazon.co.jp/dp/B0D2BMH1BB?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
 #### Flexible cable
 フラットケーブルは10～15cmの長さのものを使用します。
