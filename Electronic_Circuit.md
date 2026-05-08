@@ -91,7 +91,6 @@ push sw　および LEDはROBO-ONE Beginners autoと同じものが使用でき�
 回路図は以下の通りで、スイッチのプルアップ抵抗はRaspi5の内部でブルアップすれば取り付ける必要はありません。
 
 ![sw](pics_elec/pb_c.png)
-![sw](pics_elec/led_c.png)
 
 以下のようにはんだ付けし熱収縮チューブで被覆します。
 
