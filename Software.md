@@ -91,7 +91,7 @@ source venv/bin/activate
 
 ```bash
 pip install --upgrade pip
-pip install ultralytics  # YOLOv26 (物体認識)
+pip install ultralytics  # YOLO (物体認識)
 pip install mujoco gymnasium stable-baselines3  # 強化学習セット
 pip install numpy
 
@@ -123,7 +123,7 @@ img_bgr = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2BGR)
 
 YOLOはどんどん進化しており、簡単にインストールでき、使用できる便利な物体認識の深層学習手法です。また最近エッジおよび低電力デバイス向けに設計されたYOLO26も使えます。
 
-https://docs.ultralytics.com/ja/models/yolo26/
+[Yolo26](https://docs.ultralytics.com/ja/models/yolo26/)
 
 pi-cameraのsample programを以下に置きました。
 
