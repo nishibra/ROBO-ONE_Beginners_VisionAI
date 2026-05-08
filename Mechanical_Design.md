@@ -23,7 +23,7 @@ CPUはM2.5-8mmのねじでケース下より締め付けます。
 ![VisionAI](pics_mech/distance.png)
 
 ### PSD BKT
-PSD BKTはCPU caseにM2-5mmのスクリューねじでねじ止めします。
+PSD BKTはCPU caseにM2-5mmのタッピングビスでねじ止めします。
 
 ![VisionAI](pics_mech/psd2_bkt.png)
 
@@ -38,7 +38,7 @@ CPU case coverはCPU caseに4本のM2.5-8mmねじで締め付けます。更に�
 ![VisionAI](pics_mech/arm_head_asy.png)
 
 #### Pan servo bkt
-Pan servo bktにはPan用サーボモーターを4本のM2-5mmで締め付けます。CPU case coverとPan servo bktは4本のM2-10mmスクリューねじで締め付けます。
+Pan servo bktにはPan用サーボモーターを4本のM2-5mmで締め付けます。CPU case coverとPan servo bktは4本のM2-10mmタッピングビスで締め付けます。
 
 ![VisionAI](pics_mech/Pan_stand.png)
 ![VisionAI](pics_mech/panAsy.png)
@@ -67,7 +67,7 @@ Head部とArm部には安全や器物保護のためスポンジのドアノブ�
 購入にあたっては似たようないくつかの製品があり、内径寸法が多少異なる場合がありますので注意してください。
 
 ### カメラの取り付け
-カメラの取り付けは4本のM2-5mmのスクリューねじで締め付けます。CPUカバーのスリット部からカメラ用フラットケーブルを引き出し接続します。裏表がありますので間違えないようにしてください。
+カメラの取り付けは4本のM2-5mmのタッピングビスで締め付けます。CPUカバーのスリット部からカメラ用フラットケーブルを引き出し接続します。裏表がありますので間違えないようにしてください。
 
 ![VisionAI](pics_mech/cameraWOcover.png)
 
@@ -95,7 +95,7 @@ O-ringは以下より購入可能です。
 ![VisionAI](pics_mech/ServoTire.jpg) 
   
 ### シャーシ
-キャスタ部にはスライダーを採用しました。滑りやすくなり走行抵抗や走行音が少なくなりました。スライダーはシャーシの取り付け部丸い部分のセンターに取り付けてます。このピッチが90mm,70mm,50mmとあり、昇段昇級の審査に使われます。ボディとの取り付けはM2-10mmのスクリューねじで取り付けます。
+キャスタ部にはスライダーを採用しました。滑りやすくなり走行抵抗や走行音が少なくなりました。スライダーはシャーシの取り付け部丸い部分のセンターに取り付けてます。このピッチが90mm,70mm,50mmとあり、昇段昇級の審査に使われます。ボディとの取り付けはM2-10mmのタッピングビスで取り付けます。
 
 ![VisionAI](pics_mech/Chassis_V_70.png)
 ![VisionAI](pics_mech/set_slider.png)
