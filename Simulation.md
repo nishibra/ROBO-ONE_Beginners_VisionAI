@@ -1,20 +1,12 @@
 ### ROBO-ONE_Beginners_VisionAI
 # Simulation
+Mujocoを使った物理シミュレーションにより、深層強化学習や模倣学習の実習ができるようにします。
 
-## 環境
--Windows11
----
-## Python 
+### 環境
+- Windows11
+- Python 
+- Mujoco シミュレーション
 
-## Mujoco シミュレーション
-- Mujoco model
-- 画像処理と追従
-- Yolo11
-- 相手の認識　物体認識
-- リングの認識　セグメンテーション
-## Baseline　深層強化学習
-
-## Yolo11 深層機械学習
 ---
 ### Pythonのインストール手順 (Windows)
 * 公式サイトからダウンロード: Python.orgにアクセスし、Windows用の最新版インストーラー（64-bit）をダウンロードします。
@@ -38,11 +30,9 @@ python --version
 ### アンインストール方法
 * もしバージョンを入れ直したい場合は、Windowsの「設定」>「アプリ」>「インストールされているアプリ」からPythonを選択し、アンインストールできます。 
 
-
 ## 開発環境（venv）の構築
 OS標準のPython環境を汚さないよう、仮想環境（venv）を使用します。
 
-### システムパッケージ（Picamera2など）を共有して作成
 python3 -m venv venv 
 
 ### 有効化（作業開始時に毎回実行）
@@ -55,15 +45,12 @@ pip install ultralytics  # YOLOv8 (物体認識)
 pip install mujoco gymnasium stable-baselines3  # 強化学習セット
 pip install numpy
 ```
-
-補足: ultralytics を入れることで、カメラ映像から即座にリアルタイム物体検知が可能になります。
-
 [venvについて](https://saas.n-works.link/programming/python/python_virtualenv_how_to_buildavirtualenvironment)
 ---
 
-
 ## Mujocoについて
 
+Mujocoについては以下のサイトなどをご参照ください。
 
 [物理エンジンMuJoCoの紹介](https://qiita.com/Yayoi-Habami/items/1bf5a3e05b1516a90381)
 
@@ -161,14 +148,30 @@ Assyの重心はArmを中段の構えとし、X軸は両車輪の中心、y軸�
 ### Beginners Mujoco model
 BeginnersのMujoco modelを作成しました。
 
-### PID制御で倒立伸子
+example/balance/2wheel_balance_KRS3304R2.xml
 
+### PID制御で倒立伸子
+以下はMujoco modelをPID制御で倒立伸子を制御するScriptです。
+
+example/balance/pid_balance_control.py
 
 ### 深層強化学習で倒立伸子
+以下はMujoco modelを 深層強化学習で倒立伸子を制御するScriptです。
+
+学習
+
+example/balance/reinf_learning_balance.py
+example/balance/t2_kxrR2_balance_model.zip
+予測
+
+example/balance/reinf_predict_balance.py
+
+参考 深層強化学習サンプル
+
+example/getup
 
 
-
-### 強化学習の学習プロセスのむ確認
+### 強化学習の学習プロセスの確認
 強化学習の学習プロセス（`ppo_1` フォルダに保存されているログ）を確認するには、**TensorBoard** を使用するのが最も一般的で確実な方法です。
 Stable Baselines3（SB3）は、学習中の報酬（reward）やエピソードの長さ、損失関数（loss）などのデータを TensorBoard 形式で書き出します。
 以下の手順で表示してください。
