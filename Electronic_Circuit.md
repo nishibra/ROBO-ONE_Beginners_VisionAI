@@ -121,28 +121,27 @@ KRS-3300シリーズのすべてのサーボモーターを使用できると同
 ![servo](pics_elec/set_servo.png)
 
 ---
-#### config.txtに追記する情報
+#### BTE100Bのconfig.txtに追記する情報
+
+プッシュスイッチを押下するとログアウト
 ```
 [all]
 dtoverlay=gpio-shutdown,gpio_pin=17
 dtoverlay=gpio-poweroff,gpiopin=4,active_low=1
 ```
-ubuntuをGUIで起動している場合は、プッシュスイッチを押下するとログアウトのプロンプトが表示され、タイムアウトするかダイアログのpower offを選択するまでシャットダウンが行われません。プッシュスイッチ操作によってシンプルにシャットダウン処理を行わせるには、GNOMEの設定を変更する必要があります。なおログインしていない状態ではこの設定は効果がありません。
+LinuxをGUIで起動している場合は、プッシュスイッチを押下するとログアウトのプロンプトが表示され、タイムアウトするかダイアログのpower offを選択するまでシャットダウンが行われません。プッシュスイッチ操作によってシンプルにシャットダウン処理を行わせるには、GNOMEの設定を変更する必要があります。なおログインしていない状態ではこの設定は効果がありません。
 
 ```
 gsettings set org.gnome.SessionManager logout-prompt false
 ```
-
-#### config.txtに追記する情報
+冷却ファンのON-OFF
 ```
 [all]
 dtoverlay=gpio-fan,gpiopin=19,temp=50000
 temp=50000は50℃で冷却ファンをONする意味で、摂氏度の1000倍の値を指定
 設定温度を10℃下回るとファンはOFFする
 ```
-
-### BTE100Bのconfig.txtに追記する情報
-
+RTC
 ```
 [pi5]
 dtparam=rtc=off
@@ -150,8 +149,7 @@ dtparam=rtc=off
 dtparam=i2c_arm=on
 dtoverlay=i2c-rtc,ds3231
 ```
-
-#### config.txtに追記する情報
+UART
 ```
 [pi3]
 init_uart_clock=64000000
