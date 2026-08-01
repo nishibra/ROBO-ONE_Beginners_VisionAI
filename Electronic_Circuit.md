@@ -168,24 +168,17 @@ dtoverlay=uart4,txd4_pin=8,rxd4_pin=9
 またRaspberry Pi 3/Zeroの場合はcmdline.txtに記述されている「console=serial0,115200」を削除する事
 ```
 
-
+---
 ## 製作費を抑えた低コストバージョン
-
 最近は半導体の価格が上がっているため、できるだけコストを抑えて製作できる方法を検討しました。
 また、これまでのモデル（auto）からの移行もスムーズに行えるよう、共通で使える部品を可能な限り採用しています。
 
----
-
 ### メモリ（RAM）の見直しによるコスト削減
-
 Raspberry Pi 5 は搭載されているメモリ容量によって価格が大きく変わります。
 今回のように **RAM 2GB や 1GB のモデルを選ぶことで、本体費用をぐっと安く抑えることが可能**です。
 もし運用中にメモリが足りなくなった場合でも、**画像処理の解像度を少し落とすなどの工夫で十分対応できる**見込みです。
 
----
-
 ### 部品の購入先リンク
-
 製作に必要な部品の購入先一覧です。
 
 * **Raspberry Pi 5 (2GB RAM)**
@@ -195,10 +188,7 @@ Raspberry Pi 5 は搭載されているメモリ容量によって価格が大�
 * **高効率 8A DC-DC 降圧コンバータボード（25V → 3.3V/5V/9V/12V）**
 [AliExpressで購入する](https://ja.aliexpress.com/item/1005009516551580.html?invitationCode=dE9zNEg5TmdKaVRZM25SSGZRK2lqVVJBdk92VnQ4R0pLbVJRSE91aHMvTWpmdlBzNkVmWTlBPT0&srcSns=sns_Gmail&spreadType=socialShare&social_params=6000472165432&bizType=ProductDetail&spreadCode=dE9zNEg5TmdKaVRZM25SSGZRK2lqVVJBdk92VnQ4R0pLbVJRSE91aHMvTWpmdlBzNkVmWTlBPT0&aff_fcid=5786875ea9b24ca3a9b13708a5f3a053-1785575311533-03912-_c4CGp9K7&tt=MG&aff_fsk=_c4CGp9K7&aff_platform=default&sk=_c4CGp9K7&aff_trace_key=5786875ea9b24ca3a9b13708a5f3a053-1785575311533-03912-_c4CGp9K7&shareId=6000472165432&businessType=ProductDetail&platform=AE&terminal_id=fec46efb2d5147d8a769291a9f9e1a6d&afSmartRedirect=y)
 
----
-
 ### 構成と写真のご案内
-
 写真と合わせて配線や接続のイメージをご確認ください。
 
 * **構成全体写真**
@@ -216,15 +206,13 @@ Raspberry Pi 5 に IMU を I2C 接続した様子です。
 
 ![IMU接続図](pics_elec/imu.jpg)
 
----
-
 ### 組み立てのコツと注意点
 
 * **組み立てやすさ**
 はんだ付けを行う箇所は数か所だけですので、電子工作が初めての方や初心者の方でも比較的簡単に作ることができます。
 * **パーツの固定方法**
-* **サーボ分配器：** 固定用のボスが付いているため、ビス（ネジ）でしっかり固定できます。
-* **その他のボード：** ショートを防ぐため、絶縁に気を付けながら両面テープ等で固定してください。
+** **サーボ分配器：** 固定用のボスが付いているため、ビス（ネジ）でしっかり固定できます。
+** **その他のボード：** ショートを防ぐため、絶縁に気を付けながら両面テープ等で固定してください。
 
 
 * **プログラムの互換性**
