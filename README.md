@@ -5,6 +5,7 @@
 ---
 ### [機械設計](Mechanical_Design.md)
 ### [電子回路](Electronic_Circuit.md)
+- 20268/2 製作費を抑えた低コストバージョンの説明を追加しました。
 ### [ソフトウェア](Software.md)
 ### [シミュレーション](Simulation.md)
 ---
