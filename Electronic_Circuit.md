@@ -182,11 +182,11 @@ Raspberry Pi 5 は搭載されているメモリ容量によって価格が大�
 製作に必要な部品の購入先一覧です。
 
 * **Raspberry Pi 5 (2GB RAM)**
-[Amazonで購入する](https://www.amazon.co.jp/Raspberry-Pi-SC1110-5-2GB-RAM%E3%80%82/dp/B0DDL91V2R/ref=pd_sbs_d_sccl_2_4/357-8833739-4619627?pd_rd_w=kJzAt&content-id=amzn1.sym.d9975236-2c6f-40f8-8a79-8a86a96a4ad2&pf_rd_p=d9975236-2c6f-40f8-8a79-8a86a96a4ad2&pf_rd_r=20QCBEV2B84FWB3FKYNG&pd_rd_wg=8sHsI&pd_rd_r=36f9c6b5-6a24-4e84-bd3b-1a0c01cfd437&pd_rd_i=B0DDL91V2R&psc=1)
+[購入先](https://www.amazon.co.jp/Raspberry-Pi-SC1110-5-2GB-RAM%E3%80%82/dp/B0DDL91V2R/ref=pd_sbs_d_sccl_2_4/357-8833739-4619627?pd_rd_w=kJzAt&content-id=amzn1.sym.d9975236-2c6f-40f8-8a79-8a86a96a4ad2&pf_rd_p=d9975236-2c6f-40f8-8a79-8a86a96a4ad2&pf_rd_r=20QCBEV2B84FWB3FKYNG&pd_rd_wg=8sHsI&pd_rd_r=36f9c6b5-6a24-4e84-bd3b-1a0c01cfd437&pd_rd_i=B0DDL91V2R&psc=1)
 * **Raspberry Pi 5 (1GB RAM)**
-[Amazonで購入する](https://www.amazon.co.jp/Raspberry-Pi-1GB-RAM-%E3%80%82/dp/B0G668D1R8/ref=sr_1_9?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=22IGQZJLS4OCX&dib=eyJ2IjoiMSJ9.A0DULReHZPWL7TQ3wzLTcIvL3cV6uGX3PM5fr8flxd46adyCbl5IKX1vEOQcYguWtbW204rYR_-gwprELNIkLz36m5N_5L4MVFaCzNmWDuT99C5clI0lPJ-gHJiYqntkuYgwd5qkaGffIrTvE1r0YkntguONYFuJsXGvEkT7TBgxoPAdqO1yu5btU7ygUV1S.mkATeVxliJw2DiAXln4QxPjNZWOLqTBBSOrIChXHt2E&dib_tag=se&keywords=raspi5+1g&qid=1785573711&s=electronics&sprefix=raspi5+1g%2Celectronics%2C171&sr=1-9&ufe=app_do%3Aamzn1.fos.35785624-70c4-44ae-a5c3-3f044f475d63)
+[購入先](https://www.amazon.co.jp/Raspberry-Pi-1GB-RAM-%E3%80%82/dp/B0G668D1R8/ref=sr_1_9?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=22IGQZJLS4OCX&dib=eyJ2IjoiMSJ9.A0DULReHZPWL7TQ3wzLTcIvL3cV6uGX3PM5fr8flxd46adyCbl5IKX1vEOQcYguWtbW204rYR_-gwprELNIkLz36m5N_5L4MVFaCzNmWDuT99C5clI0lPJ-gHJiYqntkuYgwd5qkaGffIrTvE1r0YkntguONYFuJsXGvEkT7TBgxoPAdqO1yu5btU7ygUV1S.mkATeVxliJw2DiAXln4QxPjNZWOLqTBBSOrIChXHt2E&dib_tag=se&keywords=raspi5+1g&qid=1785573711&s=electronics&sprefix=raspi5+1g%2Celectronics%2C171&sr=1-9&ufe=app_do%3Aamzn1.fos.35785624-70c4-44ae-a5c3-3f044f475d63)
 * **高効率 8A DC-DC 降圧コンバータボード（25V → 3.3V/5V/9V/12V）**
-[AliExpressで購入する](https://ja.aliexpress.com/item/1005009516551580.html?invitationCode=dE9zNEg5TmdKaVRZM25SSGZRK2lqVVJBdk92VnQ4R0pLbVJRSE91aHMvTWpmdlBzNkVmWTlBPT0&srcSns=sns_Gmail&spreadType=socialShare&social_params=6000472165432&bizType=ProductDetail&spreadCode=dE9zNEg5TmdKaVRZM25SSGZRK2lqVVJBdk92VnQ4R0pLbVJRSE91aHMvTWpmdlBzNkVmWTlBPT0&aff_fcid=5786875ea9b24ca3a9b13708a5f3a053-1785575311533-03912-_c4CGp9K7&tt=MG&aff_fsk=_c4CGp9K7&aff_platform=default&sk=_c4CGp9K7&aff_trace_key=5786875ea9b24ca3a9b13708a5f3a053-1785575311533-03912-_c4CGp9K7&shareId=6000472165432&businessType=ProductDetail&platform=AE&terminal_id=fec46efb2d5147d8a769291a9f9e1a6d&afSmartRedirect=y)
+[購入先](https://ja.aliexpress.com/item/1005009516551580.html?invitationCode=dE9zNEg5TmdKaVRZM25SSGZRK2lqVVJBdk92VnQ4R0pLbVJRSE91aHMvTWpmdlBzNkVmWTlBPT0&srcSns=sns_Gmail&spreadType=socialShare&social_params=6000472165432&bizType=ProductDetail&spreadCode=dE9zNEg5TmdKaVRZM25SSGZRK2lqVVJBdk92VnQ4R0pLbVJRSE91aHMvTWpmdlBzNkVmWTlBPT0&aff_fcid=5786875ea9b24ca3a9b13708a5f3a053-1785575311533-03912-_c4CGp9K7&tt=MG&aff_fsk=_c4CGp9K7&aff_platform=default&sk=_c4CGp9K7&aff_trace_key=5786875ea9b24ca3a9b13708a5f3a053-1785575311533-03912-_c4CGp9K7&shareId=6000472165432&businessType=ProductDetail&platform=AE&terminal_id=fec46efb2d5147d8a769291a9f9e1a6d&afSmartRedirect=y)
 
 ### 構成と写真のご案内
 写真と合わせて配線や接続のイメージをご確認ください。
@@ -211,8 +211,10 @@ Raspberry Pi 5 に IMU を I2C 接続した様子です。
 * **組み立てやすさ**
 はんだ付けを行う箇所は数か所だけですので、電子工作が初めての方や初心者の方でも比較的簡単に作ることができます。
 * **パーツの固定方法**
-** **サーボ分配器：** 固定用のボスが付いているため、ビス（ネジ）でしっかり固定できます。
-** **その他のボード：** ショートを防ぐため、絶縁に気を付けながら両面テープ等で固定してください。
+
+   **サーボ分配器：** 固定用のボスが付いているため、ビス（ネジ）でしっかり固定できます。
+
+   **その他のボード：** ショートを防ぐため、絶縁に気を付けながら両面テープ等で固定してください。
 
 
 * **プログラムの互換性**
